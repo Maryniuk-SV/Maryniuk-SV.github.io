@@ -1,0 +1,127 @@
+/* ***************************** ABOUT US ***************************** */
+
+.about-us{
+	padding: 120px 0;
+	& h2{
+		font-size: 42px;
+		font-family: OpenSansSemiBold, Verdana, sans-serif;
+		line-height: 42px;
+		color: @h_color;
+		font-weight: 400;
+		margin-bottom: 45px;
+		position: relative;
+		&::before{
+			content: '';
+			display: block;
+			position: absolute;
+			bottom: -20px;
+			left: 50%;
+			height: 2px;
+			width: 170px;
+			background-color: @h_color;
+			transform: translateX(-50%);
+		}
+	}
+	& p{
+		max-width: 650px;
+		text-align: center;
+		margin: 0 auto;
+		color: @h_color;
+		margin-bottom: 65px;
+		line-height: 26px;
+	}
+	&__slider{
+		display: flex;
+	}
+	& .slider {
+		&__wrapp{
+			width: 50%;
+			height: 100%;
+			display: flex;
+			align-items: center;
+			margin-right: 30px;
+			position: relative;
+		}
+		&__items{
+			width: 570px;
+			min-height: 346px;
+			position: relative;
+			display: flex;
+		}
+		&__item{
+			align-self: center;
+			position: absolute;
+			top: 50%;
+			left: 0;
+			transform: translateY(-50%);
+			box-shadow: 0px 8px 18px -6px rgba(0,0,0,0.6), -5px 0 10px rgba(0,0,0,.3),  5px 0 10px rgba(0,0,0,.1);
+		}
+		&__navigation{
+			font-size: 30px;
+			width: 100%;
+			position: absolute;
+			display: flex;
+			justify-content: space-between;
+			& .prev, & .next{
+				width: 46px;
+				height: 46px;
+				background-color: rgba(0,0,0,.2);
+				border: 1px solid #f7f7f7;
+				text-align: center;
+				line-height: 43px;
+				transition: background-color .5s;
+				color: #fff;
+				cursor: pointer;
+				&:hover{
+					background-color: @main_color;
+					border: 1px solid @main_color;
+				}
+			}
+			& .prev{
+				margin-left: 20px;
+			}
+			& .next{
+				margin-right: 20px;
+			}
+		}
+		&__desc{
+			width: 50%;
+			display: flex;
+			flex-direction: column;
+			position: relative;
+			& h3{
+				text-transform: none;
+				text-align: left;
+				font-family: OpenSansSemiBold;
+				color: @h_color;
+				font-size: 20px;
+				letter-spacing: 0.2px;
+				margin-bottom: 20px;
+				& + p{
+					text-align: left;
+				}
+			}
+			& a{
+				color: @main_color;
+				font-size: 15px;
+				font-weight: 400;
+			}
+		}
+	}
+}
+.about__btn{
+	position: absolute;
+	bottom: 12px;
+	left: 0;
+	letter-spacing: .15px;
+	& .slider__btn{
+		border-width: 2px;
+		border-radius: 4px;
+		&:hover{
+			color: #fff;
+		}
+		&:first-child{
+			margin-right: 30px;
+		}
+	}
+}

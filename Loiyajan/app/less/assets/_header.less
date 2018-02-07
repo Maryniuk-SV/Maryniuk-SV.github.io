@@ -1,0 +1,152 @@
+/* ************************ HEADER ************************** */
+
+.header{
+	padding-top: 40px;
+}
+
+.top_menu{
+	max-width: 990px;
+	margin: 0 auto;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+.menu{
+	display: flex;
+	justify-content: space-between;
+	& li{
+		text-transform: uppercase;
+		font-weight: 700;
+		font-size: 14px;
+		& a {
+			display: block;
+			color: #333333;
+			padding: 10px;
+			border-radius: 4px;
+			transition: all .4s ease;
+			&:hover{
+				background-color: @main_color;
+				color: #fefefe;
+				text-decoration: none;
+			}
+		}
+	}
+}
+.logo{
+	text-transform: uppercase;
+	&__link{
+		border: 2px solid @h_color;
+		& a{
+			display: block;
+			color: @main_color;
+			font-size: 26px;
+			letter-spacing: 0.26px;
+			font-family: NexaBold;
+			font-weight: 400;
+			padding: 10px;
+			&:hover{
+				text-decoration: none;
+			}
+		}
+	}
+}
+
+/* ********************** HAMBURGER ************************** */
+
+.hamb{
+	&__line{
+		display: flex;
+		align-items: center;
+		margin-bottom: 1px;
+		width: 40px;
+		height: 8px;
+		background-color: #e3e3e3;
+		border-radius: 3px;
+	}
+	& input:checked + .hamb__line{
+		display: none;
+	}
+}
+
+
+/* ****************** SLIDER ***************** */
+
+.slider{
+	width: 100%;
+	margin-top: 40px;
+	height: 860px;
+	background-image: url(../img/slider_bg.png);
+	background-size: cover;
+	position: relative;
+	&__wrap{
+		width: 100%;
+		height: 100%;
+		background-color: #000000;
+		opacity: 0.65;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		& h1{
+			width: 100%;
+			font-size: 72px;
+			font-family: NexaBold;
+			color: @main_color;
+			font-weight: 700;
+			display: block;
+			line-height: 72px;
+			& + p{
+				color: #fff;
+				text-align: center;
+				font-size: 62px;
+				text-transform: uppercase;
+				font-weight: 100;
+				line-height: 62px;
+				margin: 20px;
+			}
+		}
+	}
+	&__buttons{
+		display: flex;
+		justify-content: center;
+		& a{
+			color: #fff;
+			margin-right: 25px;
+			&:hover{
+				text-decoration: none;
+			}
+		}
+	}
+	&__control{
+		position: absolute;
+		top: 50%;
+		right: 10%;
+		transform: translateY(-50%);
+	}
+}
+
+.btn{
+	// display: block;
+	text-transform: uppercase;
+	padding: 10px;
+	border: 1px solid @main_color;
+	font-size: 14px;
+	transition: background-color .5s;
+	&:hover{
+		background-color: @main_color;
+	}
+}
+
+.dot{
+	display: block;
+	margin-bottom: 2px;
+	width: 12px;
+	height: 12px;
+	border: 1px solid #ffffff;
+	border-radius: 50%;
+	transition: background-color .5s;
+	cursor: pointer;
+	&:hover{
+		background-color: @main_color;
+		border-color: @main_color;
+	}
+}

@@ -1,0 +1,147 @@
+/* *************************** WE TEAM ***************************** */
+
+.we-team{
+	padding: 100px 0;
+	& h2{
+		font-family: OpenSansSemiBold, Verdana, Arial, sans-serif;
+		font-size: 42px;
+		line-height: 42px;
+		color: @h_color;
+		position: relative;
+		margin-bottom: 40px;
+		&::before{
+			.bottom__line;
+			background-color: @h_color;
+		}
+		& + p{
+			max-width: 650px;
+			margin: 0 auto;
+			text-align: center;
+			color: @h_color;
+			line-height: 26px;
+			margin-bottom: 200px;
+		}
+	}
+}
+.employees{
+	display: flex;
+	justify-content: space-between;
+	flex-wrap: wrap;
+	& .employee{
+		max-width: 270px;
+		padding-top: 200px;
+		padding-bottom: 20px;
+		margin-bottom: 200px;
+		background-color: #f6f6f6;
+		position: relative;
+		& h3{
+			font-family: OpenSansSemiBold;
+			font-size: 22px;
+			line-height: 22px;
+			color: @main_color;
+			margin-bottom: 10px;
+			& + span{
+				font-family: OpenSansSemiBold;
+				display: block;
+				text-align: center;
+				font-size: 14px;
+				color: @h_color;
+				margin-bottom: 20px;
+			}
+		}
+		& p{
+			color: #444;
+			text-align: center;
+			font-size: 15px;
+			line-height: 22px;
+			font-weight: 300;
+		}
+	}
+	& .foto{
+		width: 270px;
+		height: 270px;
+		position: absolute;
+		top: -135px;
+    left: 0;
+		&__wrap{
+			width: 270px;
+			height: 270px;
+			position: relative;
+			&::before{
+				content: '';
+				display: block;
+				position: absolute;
+				height: 270px;
+				width: 270px;
+				border-radius: 50%;
+				top: 0;
+				right: 0;
+				bottom: 0;
+				left: 0;
+				background-color: @main_color;
+				opacity: 0;
+				transition: opacity .4s;
+			}
+			&:hover::before{
+				opacity: .5;
+			}
+			&:hover ~ .social .social__right ul{
+				right: 22px;
+			}
+			&:hover ~ .social .social__left ul{
+				left: 40px;
+			}
+		}
+	}
+	& .social{
+		overflow: hidden;
+		width: 270px;
+		height: 30px;
+		display: flex;
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		& ul{
+			display: flex;
+			& a{
+				display: inline-block;
+				margin-right: 30px;
+				color: #fff;
+				font-size: 26px;
+				transition: color .4s;
+				&:hover{
+					color: @h_color;
+				}
+			}
+		}
+		&__left{
+			width: 50%;
+			position: relative;
+			& ul{
+				position: absolute;
+				left: -200px;
+				top: 50%;
+				transform: translateY(-50%);
+				transition: left .5s ease;
+			}
+		}
+		&__right{
+			width: 50%;
+			position: relative;
+			& ul{
+				position: absolute;
+				top: 50%;
+				right: -200px;
+				transform: translateY(-50%);
+				transition: right .5s ease;
+			}
+		}
+		&:hover > .social__right ul{
+			right: 22px;
+		}
+		&:hover > .social__left ul{
+			left: 40px;
+		}
+	}
+}
