@@ -1031,10 +1031,9 @@ a:hover {
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -webkit-justify-content: space-around;
+      -ms-flex-pack: distribute;
+          justify-content: space-around;
 }
 .portfolio__item-link ul {
   display: -webkit-box;
@@ -1074,7 +1073,7 @@ a:hover {
 }
 .portfolio__item-link ul a i {
   display: inline-block;
-  margin-top: 14px;
+  margin-top: 15px;
   margin-left: 4px;
 }
 .portfolio__item-desc {
@@ -1093,7 +1092,7 @@ a:hover {
   -webkit-transition: bottom .4s;
   -o-transition: bottom .4s;
   transition: bottom .4s;
-  padding: 10px 0;
+  padding: 20px 0;
 }
 .portfolio__item-desc p {
   margin: 0;
@@ -1120,9 +1119,115 @@ a:hover {
   text-transform: uppercase;
   font-size: 18px;
   background-color: #f94877;
-  padding: 10px 20px;
+  padding: 15px 30px;
   -webkit-border-radius: 3px;
           border-radius: 3px;
+}
+.buy-now {
+  margin-top: 95px;
+  background-image: url(../img/banner-buy-now.png);
+  -webkit-background-size: cover;
+          background-size: cover;
+  min-height: 480px;
+  padding-top: 120px;
+  position: relative;
+}
+.buy-now::before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: #f94877;
+  opacity: .5;
+}
+.buy-now__container {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.buy-now__container p {
+  max-width: 800px;
+  font-size: 22px;
+  line-height: 30px;
+  margin-bottom: 75px;
+  text-align: center;
+  color: #fff;
+  z-index: 3;
+}
+.buy-now h2 {
+  color: #fff;
+  position: relative;
+  margin-bottom: 85px;
+  cursor: pointer;
+}
+.buy-now h2::before {
+  content: "";
+  display: block;
+  position: absolute;
+  height: 2px;
+  width: 170px;
+  background-color: #f7f7f7;
+  bottom: -12px;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+      -ms-transform: translateX(-50%);
+          transform: translateX(-50%);
+  background-color: #fefdfb;
+}
+.buy-now h2 span {
+  color: #f94877;
+}
+.buy-now__link {
+  z-index: 2;
+}
+.buy-now__link ul {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+.buy-now__link ul li:first-child a {
+  margin-right: 70px;
+}
+.buy-now__link ul a {
+  font-family: OpenSansSemiBold, Verdana, Arial, sans-serif;
+  font-size: 18px;
+  display: inline-block;
+  text-transform: uppercase;
+  padding: 16px 34px;
+  -webkit-border-radius: 3px;
+          border-radius: 3px;
+  border: 1px solid #ffffff;
+  color: #fefefe;
+  -webkit-transition: background-color 0.4s;
+  -o-transition: background-color 0.4s;
+  transition: background-color 0.4s;
+}
+.buy-now__link ul a:hover {
+  color: #fff;
+  border-color: #f94877;
+  background-color: #f94877;
 }
 /* ****************** MEDIA QUERIS ***************** */
 @media screen and (max-width: 1200px) {
@@ -1293,5 +1398,26 @@ a:hover {
   }
   .portfolio__item {
     width: 100%;
+  }
+  .buy-now h2 {
+    font-size: 30px;
+  }
+  .buy-now p {
+    padding: 0 10px;
+  }
+  .buy-now__link ul {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .buy-now__link ul li:first-child a {
+    margin-right: 0;
+    margin-bottom: 20px;
   }
 }
