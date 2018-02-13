@@ -62,6 +62,13 @@
   font-style: normal;
   font-weight: normal;
 }
+@font-face {
+  font-family: "FontAwesome";
+  src: url("../fonts/fontawesome/fontawesome-webfont.eot");
+  src: url("../fonts/fontawesome/fontawesome-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/fontawesome/fontawesome-webfont.woff") format("woff"), url("../fonts/fontawesome/fontawesome-webfont.ttf") format("truetype");
+  font-style: normal;
+  font-weight: normal;
+}
 .bottom__line {
   content: "";
   display: block;
@@ -1449,6 +1456,101 @@ a:hover {
   margin: 0 auto;
   max-width: 1000px;
 }
+.responsive {
+  margin-top: 110px;
+  padding: 0 10px;
+}
+.responsive h2 {
+  margin-bottom: 40px;
+  position: relative;
+}
+.responsive h2::after {
+  content: "";
+  display: block;
+  position: absolute;
+  height: 2px;
+  width: 170px;
+  background-color: #f7f7f7;
+  bottom: -12px;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+      -ms-transform: translateX(-50%);
+          transform: translateX(-50%);
+  background-color: #666666;
+}
+.responsive h2 + p {
+  max-width: 650px;
+  text-align: center;
+  margin: 0 auto;
+  color: #666666;
+  font-size: 16px;
+  line-height: 26px;
+  letter-spacing: 0.16px;
+  margin-bottom: 60px;
+}
+.responsive__container {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+.responsive__image {
+  width: 50%;
+  -webkit-align-self: flex-end;
+      -ms-flex-item-align: end;
+          align-self: flex-end;
+}
+.responsive__box {
+  width: 50%;
+}
+.responsive__box-icon {
+  width: 63px;
+  height: 63px;
+  -webkit-border-radius: 3px;
+          border-radius: 3px;
+  border: 1px solid #f94877;
+  color: #f94877;
+  text-align: center;
+  line-height: 61px;
+  font-size: 32px;
+  font-weight: 400;
+  margin-right: 30px;
+  cursor: pointer;
+  -webkit-transition: all .4s;
+  -o-transition: all .4s;
+  transition: all .4s;
+}
+.responsive__box-icon:hover {
+  background-color: #f94877;
+  color: #fff;
+}
+.responsive__box-item {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  margin-bottom: 50px;
+}
+.responsive__box-desc {
+  width: 80%;
+}
+.responsive__box-desc h4 {
+  text-transform: capitalize;
+  cursor: pointer;
+  color: #666666;
+  font-family: OpenSansSemiBold, Verdana, Arial, sans-serif;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 10px;
+  text-align: left;
+  margin-bottom: 10px;
+}
+.responsive__box-desc p {
+  font-size: 14px;
+  font-weight: 300;
+  line-height: 22px;
+  color: #666666;
+}
 /* ****************** MEDIA QUERIS ***************** */
 @media screen and (max-width: 1200px) {
   .employees {
@@ -1505,6 +1607,28 @@ a:hover {
   }
   .happy-clients .wrap {
     max-width: 600px;
+  }
+  .responsive__container {
+    padding: 0 10px;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .responsive__image {
+    -webkit-align-self: center;
+        -ms-flex-item-align: center;
+            align-self: center;
+    width: 90%;
+    margin-bottom: 30px;
+  }
+  .responsive__box {
+    width: 90%;
   }
 }
 @media screen and (max-width: 768px) {
@@ -1670,5 +1794,15 @@ a:hover {
   }
   .happy-clients .wrap {
     max-width: 200px;
+  }
+  .responsive__box-icon {
+    height: 50px;
+    width: 50px;
+    font-size: 20px;
+    line-height: 50px;
+  }
+  .responsive__box h4 {
+    font-size: 16px;
+    line-height: 18px;
   }
 }
