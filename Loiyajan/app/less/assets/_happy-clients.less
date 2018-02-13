@@ -1,0 +1,88 @@
+.happy-clients{
+	margin-top: 120px;
+	& h2{
+		margin-bottom: 40px;
+		position: relative;
+		&::after{
+			.bottom__line;
+			background-color: #666666;
+		}
+	}
+	& p{
+		max-width: 650px;
+		text-align: center;
+		margin: 0 auto;
+		color: #666666;
+		font-family: @mainfont;
+		font-size: 16px;
+		font-weight: 400;
+		line-height: 26px;
+		margin-bottom: 70px;
+	}
+	&__container{
+		height: 162px;
+		background-image: url(../img/clients-logo-container.png);
+		background-size: cover;
+		position: relative;
+		display: flex;
+		align-items: center;
+		&::before{
+			content: "";
+			display: block;
+			position: absolute;
+			top: 0;
+			right: 0;
+			bottom: 0;
+			left: 0;
+			background-color: rgba(249, 72, 119, .35);
+		}
+		& .wrap__clients{
+			margin: 0 auto;
+		}
+		& .clients{
+			display: flex;
+			align-items: center;
+			overflow: hidden;
+		}
+		& .owl-stage{
+			display: flex;
+			justify-content: space-around;
+			align-items: center;
+
+			& .item-cl{
+				width: 150px;
+			}
+		}
+	}
+	.owl-prev, .owl-next{
+		color: #fff;
+		width: 46px;
+		height: 46px;
+		border: 1px solid #f7f7f7;
+		position: absolute;
+		top: 50%;
+		transform: translateY(-50%);
+		font-size: 30px;
+		font-weight: 400;
+		line-height: 42px;
+		letter-spacing: 0.3px;
+		text-align: center;
+		cursor: pointer;
+		transition: all .4s;
+		&:hover{
+			background-color: @main_color;
+			border-color: @main_color;
+		}
+	}
+	.owl-prev{
+		left: 30px;
+	}
+	.owl-next{
+		right: 30px;
+	}
+	& .wrap{
+		z-index: 2;
+		margin: 0 auto;
+		max-width: 1000px;
+	}
+}
