@@ -1551,6 +1551,256 @@ a:hover {
   line-height: 22px;
   color: #666666;
 }
+.contact-us {
+  margin-top: 120px;
+  margin-bottom: 100px;
+  padding: 0 10px;
+}
+.contact-us h2 {
+  margin-bottom: 35px;
+  position: relative;
+}
+.contact-us h2::after {
+  content: "";
+  display: block;
+  position: absolute;
+  height: 2px;
+  width: 170px;
+  background-color: #f7f7f7;
+  bottom: -12px;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+      -ms-transform: translateX(-50%);
+          transform: translateX(-50%);
+  background-color: #666666;
+}
+.contact-us h2 + p {
+  max-width: 650px;
+  margin: 0 auto;
+  text-align: center;
+  font-size: 16px;
+  line-height: 26px;
+  letter-spacing: 0.16px;
+  color: #666666;
+  margin-bottom: 80px;
+}
+.contact-us__container {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+.contact-us .box__form {
+  width: 49%;
+}
+.contact-us .box__form form {
+  width: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+.contact-us .box__form form input,
+.contact-us .box__form form textarea {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  height: 55px;
+  -webkit-border-radius: 5px;
+          border-radius: 5px;
+  border: 1px solid #cccccc;
+  outline: none;
+  padding: 0 20px;
+  color: #333333;
+  font-family: OpenSansSemiBold, Verdana, Arial, sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 22px;
+  margin-bottom: 22px;
+}
+.contact-us .box__form form input::-webkit-input-placeholder,
+.contact-us .box__form form textarea::-webkit-input-placeholder {
+  text-transform: uppercase;
+  color: #888888;
+}
+.contact-us .box__form form input::-moz-placeholder,
+.contact-us .box__form form textarea::-moz-placeholder {
+  text-transform: uppercase;
+  color: #888888;
+}
+.contact-us .box__form form input:-ms-input-placeholder,
+.contact-us .box__form form textarea:-ms-input-placeholder {
+  text-transform: uppercase;
+  color: #888888;
+}
+.contact-us .box__form form input::-ms-input-placeholder,
+.contact-us .box__form form textarea::-ms-input-placeholder {
+  text-transform: uppercase;
+  color: #888888;
+}
+.contact-us .box__form form input::placeholder,
+.contact-us .box__form form textarea::placeholder {
+  text-transform: uppercase;
+  color: #888888;
+}
+.contact-us .box__form form input:focus::-webkit-input-placeholder,
+.contact-us .box__form form textarea:focus::-webkit-input-placeholder {
+  color: transparent;
+}
+.contact-us .box__form form input:focus::-moz-placeholder,
+.contact-us .box__form form textarea:focus::-moz-placeholder {
+  color: transparent;
+}
+.contact-us .box__form form input:focus:-ms-input-placeholder,
+.contact-us .box__form form textarea:focus:-ms-input-placeholder {
+  color: transparent;
+}
+.contact-us .box__form form input:focus::-ms-input-placeholder,
+.contact-us .box__form form textarea:focus::-ms-input-placeholder {
+  color: transparent;
+}
+.contact-us .box__form form input:focus::placeholder,
+.contact-us .box__form form textarea:focus::placeholder {
+  color: transparent;
+}
+.contact-us .box__form form input:focus:invalid,
+.contact-us .box__form form textarea:focus:invalid {
+  color: red;
+  border: 2px solid red;
+}
+.contact-us .box__form form input:valid,
+.contact-us .box__form form textarea:valid {
+  border: 1px solid #fcc2c5;
+}
+.contact-us .box__form form textarea {
+  height: 130px;
+  resize: none;
+  padding-top: 16px;
+}
+.contact-us .box__form-btn {
+  height: 55px;
+  -webkit-border-radius: 5px;
+          border-radius: 5px;
+  background-color: #f94877;
+  outline: none;
+  color: #ffffff;
+  font-family: OpenSansSemiBold, Verdana, Arial, sans-serif;
+  font-size: 20px;
+  line-height: 22px;
+  text-transform: uppercase;
+  cursor: pointer;
+  border: none;
+}
+.contact-us .box__contact {
+  padding-right: 30px;
+  -webkit-border-radius: 5px;
+          border-radius: 5px;
+  border: 1px solid #cccccc;
+  width: 43%;
+  text-transform: uppercase;
+}
+.contact-us .box__contact > ul {
+  padding-top: 56px;
+  min-height: 380px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: end;
+  -webkit-align-items: flex-end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  color: #666666;
+}
+.contact-us .box__contact > ul li {
+  margin-bottom: 20px;
+}
+.contact-us .box__contact > ul li:first-child a {
+  color: #f94877;
+  font-family: OpenSansRegular;
+  font-size: 22px;
+  font-weight: 700;
+}
+.contact-us .box__contact > ul li:nth-child(2) span {
+  display: block;
+  text-align: right;
+}
+.contact-us .box__contact > ul li:nth-child(3) a {
+  display: block;
+  text-align: right;
+  color: #666666;
+  font-family: OpenSansRegular;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+}
+.contact-us .box__contact .contact__social {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+.contact-us .box__contact .contact__social li {
+  width: 25px;
+  height: 25px;
+  -webkit-border-radius: 50%;
+          border-radius: 50%;
+  border: 1px solid #666666;
+  margin-left: 10px;
+  text-align: center;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-transition: background .4s;
+  -o-transition: background .4s;
+  transition: background .4s;
+}
+.contact-us .box__contact .contact__social li:hover {
+  background-color: #f94877;
+}
+.contact-us .box__contact .contact__social li:hover a {
+  color: #fff;
+}
+.contact-us .box__contact .contact__social li a {
+  display: block;
+  color: #666666;
+  font-size: 16px;
+  -webkit-transition: color .4s;
+  -o-transition: color .4s;
+  transition: color .4s;
+  padding: 2px;
+  -webkit-border-radius: 50%;
+          border-radius: 50%;
+}
 /* ****************** MEDIA QUERIS ***************** */
 @media screen and (max-width: 1200px) {
   .employees {
@@ -1702,6 +1952,35 @@ a:hover {
   .happy-clients .wrap {
     max-width: 400px;
   }
+  .contact-us__container {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .contact-us__container .box__form {
+    width: 90%;
+    margin-bottom: 30px;
+  }
+  .contact-us__container .box__contact {
+    padding: 0;
+    width: 90%;
+  }
+  .contact-us__container .box__contact > ul {
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .contact-us__container .box__contact > ul li:nth-child(2) span,
+  .contact-us__container .box__contact > ul li:nth-child(3) a {
+    text-align: center;
+  }
 }
 @media screen and (max-width: 576px) {
   .menu_left {
@@ -1804,5 +2083,12 @@ a:hover {
   .responsive__box h4 {
     font-size: 16px;
     line-height: 18px;
+  }
+  .contact-us .box__contact {
+    width: 100%;
+    font-size: 14px;
+  }
+  .contact-us .box__form {
+    width: 100%;
   }
 }
