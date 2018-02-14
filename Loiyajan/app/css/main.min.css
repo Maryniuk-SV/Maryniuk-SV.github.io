@@ -180,6 +180,7 @@ nav.top_menu .show_menu {
   font-size: 32px;
   color: #333;
   right: 10px;
+  opacity: .9;
 }
 nav.top_menu .show {
   display: block;
@@ -188,6 +189,7 @@ nav.top_menu .show {
   margin-left: 30px;
 }
 .menu_left li:last-child a {
+  opacity: .9;
   font-size: 32px;
   padding: 0;
 }
@@ -2122,6 +2124,11 @@ nav.top_menu .show {
     font-size: 52px;
     line-height: 52px;
   }
+  .steps {
+    -webkit-justify-content: space-around;
+        -ms-flex-pack: distribute;
+            justify-content: space-around;
+  }
   .portfolio__item {
     width: 33.333333%;
   }
@@ -2279,23 +2286,23 @@ nav.top_menu .show {
   nav.top_menu .show_menu {
     display: block;
   }
-  nav.top_menu header.header nav.top_menu .menu.menu_left li:last-child.show_right_menu {
+  header.header nav.top_menu .menu.menu_left li:last-child.show_right_menu {
     display: none;
   }
-  nav.top_menu .menu_right {
+  .menu_right {
     top: 202px;
   }
-  nav.top_menu .slider__wrap h1 {
+  .slider__wrap h1 {
     -webkit-transform: translateY(0);
         -ms-transform: translateY(0);
             transform: translateY(0);
   }
-  nav.top_menu .slider__wrap h1 + p {
+  .slider__wrap h1 + p {
     -webkit-transform: translateY(0);
         -ms-transform: translateY(0);
             transform: translateY(0);
   }
-  nav.top_menu .slider__buttons {
+  .slider__buttons {
     margin: 0 auto;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -2311,53 +2318,53 @@ nav.top_menu .show {
         -ms-transform: translateY(0);
             transform: translateY(0);
   }
-  nav.top_menu .slider__buttons .btn {
+  .slider__buttons .btn {
     margin-bottom: 10px;
     margin-right: 0;
   }
-  nav.top_menu .about-us__slider .slider__navigation .prev {
+  .about-us__slider .slider__navigation .prev {
     margin-left: 20px;
   }
-  nav.top_menu .about-us__slider .slider__navigation .next {
+  .about-us__slider .slider__navigation .next {
     margin-right: 20px;
   }
-  nav.top_menu .we-amazing .steps {
+  .we-amazing .steps {
     -webkit-box-pack: center;
     -webkit-justify-content: center;
         -ms-flex-pack: center;
             justify-content: center;
   }
-  nav.top_menu .we-amazing .steps .step {
+  .we-amazing .steps .step {
     max-width: 350px;
   }
-  nav.top_menu .service h2 {
+  .service h2 {
     font-size: 30px;
   }
-  nav.top_menu .service h2::after {
+  .service h2::after {
     width: 100px;
   }
-  nav.top_menu .service__item {
+  .service__item {
     min-width: 320px;
   }
-  nav.top_menu .service__item::before {
+  .service__item::before {
     left: 110px;
   }
-  nav.top_menu .portfolio h2 {
+  .portfolio h2 {
     font-size: 30px;
   }
-  nav.top_menu .portfolio__item {
+  .portfolio__item {
     width: 100%;
   }
-  nav.top_menu .buy-now {
+  .buy-now {
     padding-bottom: 30px;
   }
-  nav.top_menu .buy-now h2 {
+  .buy-now h2 {
     font-size: 30px;
   }
-  nav.top_menu .buy-now p {
+  .buy-now p {
     padding: 0 10px;
   }
-  nav.top_menu .buy-now__link ul {
+  .buy-now__link ul {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
     -webkit-flex-direction: column;
@@ -2368,54 +2375,54 @@ nav.top_menu .show {
         -ms-flex-align: center;
             align-items: center;
   }
-  nav.top_menu .buy-now__link ul li:first-child a {
+  .buy-now__link ul li:first-child a {
     margin-right: 0;
     margin-bottom: 20px;
   }
-  nav.top_menu .clients-say {
+  .clients-say {
     padding: 0 5px;
   }
-  nav.top_menu .clients-say h2 {
+  .clients-say h2 {
     font-size: 30px;
   }
-  nav.top_menu .happy-clients h2 {
+  .happy-clients h2 {
     font-size: 30px;
   }
-  nav.top_menu .happy-clients h2 + p {
+  .happy-clients h2 + p {
     padding: 0 5px;
   }
-  nav.top_menu .happy-clients .wrap {
+  .happy-clients .wrap {
     max-width: 200px;
   }
-  nav.top_menu .responsive__box-icon {
+  .responsive__box-icon {
     height: 50px;
     width: 50px;
     font-size: 20px;
     line-height: 50px;
   }
-  nav.top_menu .responsive__box h4 {
+  .responsive__box h4 {
     font-size: 16px;
     line-height: 18px;
   }
-  nav.top_menu .contact-us .box__contact {
+  .contact-us .box__contact {
     width: 100%;
     font-size: 14px;
   }
-  nav.top_menu .contact-us .box__form {
+  .contact-us .box__form {
     width: 100%;
   }
-  nav.top_menu .footer__social {
+  .footer__social {
     bottom: 15px;
   }
-  nav.top_menu .footer__social ul li {
+  .footer__social ul li {
     margin-right: 5px;
   }
-  nav.top_menu .footer__social ul li a {
+  .footer__social ul li a {
     width: 40px;
     height: 40px;
     font-size: 20px;
   }
-  nav.top_menu .footer__copy {
+  .footer__copy {
     line-height: 18px;
     text-align: center;
   }

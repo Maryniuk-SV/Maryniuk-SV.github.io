@@ -57,6 +57,9 @@
 			}
 		}
 	}
+	.steps{
+		justify-content: space-around;
+	}
 	.portfolio__item{
 		width: 33.333333%;
 	}
@@ -200,143 +203,143 @@
 		& .show_menu{
 			display: block;
 		}
-		header.header nav.top_menu .menu.menu_left{
-			& li:last-child.show_right_menu{
-				display: none;
-			}
+	}
+	header.header nav.top_menu .menu.menu_left{
+		& li:last-child.show_right_menu{
+			display: none;
 		}
-		.menu_right{
-			top: 202px;
-		}
-		.slider__wrap{
-			& h1{
-				transform: translateY(0);
-				& + p{
-					transform: translateY(0);
-				}
-			}
-		}
-		.slider__buttons{
-			margin: 0 auto;
-			flex-direction: column;
-			text-align: center;
-			align-items: center;
+	}
+	.menu_right{
+		top: 202px;
+	}
+	.slider__wrap{
+		& h1{
 			transform: translateY(0);
+			& + p{
+				transform: translateY(0);
+			}
+		}
+	}
+	.slider__buttons{
+		margin: 0 auto;
+		flex-direction: column;
+		text-align: center;
+		align-items: center;
+		transform: translateY(0);
 
-			& .btn{
-				margin-bottom: 10px;
-				margin-right: 0;
+		& .btn{
+			margin-bottom: 10px;
+			margin-right: 0;
+		}
+	}
+	.about-us__slider .slider__navigation{
+		& .prev{
+			margin-left: 20px;
+		}
+		& .next{
+			margin-right: 20px;
+		}
+	}
+	.we-amazing{
+		& .steps{
+			justify-content: center;
+			& .step{
+				max-width: 350px;
 			}
 		}
-		.about-us__slider .slider__navigation{
-			& .prev{
-				margin-left: 20px;
-			}
-			& .next{
-				margin-right: 20px;
-			}
+	}
+	.service h2{
+		font-size: 30px;
+		&::after{
+			width: 100px;
 		}
-		.we-amazing{
-			& .steps{
-				justify-content: center;
-				& .step{
-					max-width: 350px;
-				}
-			}
+	}
+	.service__item{
+		min-width: 320px;
+		&::before{
+			left: 110px;
 		}
-		.service h2{
+	}
+	.portfolio{
+		& h2{
 			font-size: 30px;
-			&::after{
-				width: 100px;
+		}
+		&__item{
+			width: 100%;
+		}
+	}
+	.buy-now{
+		padding-bottom: 30px;
+		& h2{
+			font-size: 30px;
+		}
+		& p{
+			padding: 0 10px;
+		}
+		&__link{
+			& ul{
+				flex-direction: column;
+				align-items: center;
+				& li:first-child a{
+					margin-right: 0;
+					margin-bottom: 20px;
+				}
 			}
 		}
-		.service__item{
-			min-width: 320px;
-			&::before{
-				left: 110px;
+	}
+	.clients-say{
+		padding: 0 5px;
+		& h2{
+			font-size: 30px;
+		}
+	}
+	.happy-clients {
+		& h2{
+			font-size: 30px;
+			& + p{
+				padding: 0 5px;
 			}
 		}
-		.portfolio{
-			& h2{
-				font-size: 30px;
-			}
-			&__item{
-				width: 100%;
-			}
+		& .wrap{
+			max-width: 200px;
 		}
-		.buy-now{
-			padding-bottom: 30px;
-			& h2{
-				font-size: 30px;
-			}
-			& p{
-				padding: 0 10px;
-			}
-			&__link{
-				& ul{
-					flex-direction: column;
-					align-items: center;
-					& li:first-child a{
-						margin-right: 0;
-						margin-bottom: 20px;
+	}
+	.responsive__box{
+		&-icon{
+			height: 50px;
+			width: 50px;
+			font-size: 20px;
+			line-height: 50px;
+		}
+		& h4{
+			font-size: 16px;
+			line-height: 18px;
+		}
+	}
+	.contact-us .box__contact{
+		width: 100%;
+		font-size: 14px;
+	}
+	.contact-us .box__form{
+		width: 100%;
+	}
+	.footer{
+		&__social{
+			bottom: 15px;
+			& ul{
+				& li{
+					margin-right: 5px;
+					& a{
+						width: 40px;
+						height: 40px;
+						font-size: 20px;
 					}
 				}
 			}
 		}
-		.clients-say{
-			padding: 0 5px;
-			& h2{
-				font-size: 30px;
-			}
-		}
-		.happy-clients {
-			& h2{
-				font-size: 30px;
-				& + p{
-					padding: 0 5px;
-				}
-			}
-			& .wrap{
-				max-width: 200px;
-			}
-		}
-		.responsive__box{
-			&-icon{
-				height: 50px;
-				width: 50px;
-				font-size: 20px;
-				line-height: 50px;
-			}
-			& h4{
-				font-size: 16px;
-				line-height: 18px;
-			}
-		}
-		.contact-us .box__contact{
-			width: 100%;
-			font-size: 14px;
-		}
-		.contact-us .box__form{
-			width: 100%;
-		}
-		.footer{
-			&__social{
-				bottom: 15px;
-				& ul{
-					& li{
-						margin-right: 5px;
-						& a{
-							width: 40px;
-							height: 40px;
-							font-size: 20px;
-						}
-					}
-				}
-			}
-			&__copy{
-				line-height: 18px;
-				text-align: center;
-			}
+		&__copy{
+			line-height: 18px;
+			text-align: center;
 		}
 	}
 }
