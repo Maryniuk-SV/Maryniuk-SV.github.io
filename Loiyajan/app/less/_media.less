@@ -15,15 +15,31 @@
 		}
 	}
 }
+@media only screen and (max-width: 1050px) and (min-width: 992px) {
+	ul.menu_right{
+		margin-right: 60px;
+		& li:nth-child(3){
+			display: none;
+		}
+	}
+	.menu_left{
+		margin-left: 50px;
+	}
+}
 // Large devices (desktops, 992px and up)
 @media screen and (max-width: 992px) {
 	.logo{
-		order: -1;
 		left: 5%;
-		transform: translateX(0);
+		transform: translate(0, -50%);
 	}
-	.top_menu{
-		justify-content: space-around;
+	nav.top_menu{
+		justify-content: flex-end;
+		& .menu_left{
+			margin-right: 20px;
+			& li:last-child{
+				display: block;
+			}
+		}
 	}
 	.menu_right{
 		display: none;
@@ -66,6 +82,18 @@
 
 // Medium devices (tablets, 768px and up)
 @media screen and (max-width: 768px) {
+	
+	.logo{
+		left: 2%;
+	}
+	nav.top_menu{
+		& .menu_left{
+			margin-right: 10px;
+			& li:last-child{
+				margin-left: 10px;
+			}
+		}
+	}
 	.slider__control{
 		top: 70%;
 		right: 50%;
@@ -152,130 +180,163 @@
 			}
 		}
 	}
+	.slider__buttons a.slider__btn{
+		padding: 10px;
+	}
 }
 
 // Small devices (landscape phones, 576px and up)
 @media screen and (max-width: 576px) {
+	.logo{
+		left: 50%;
+		transform: translate(-50%, -50%);
+	}
 	.menu_left{
 		display: none;
+		margin: 0;
+		top: 50px;
 	}
-	.slider__buttons{
-		margin: 0 auto;
-		flex-direction: column;
-		text-align: center;
-		align-items: center;
-		& .btn{
-			margin-bottom: 10px;
+	nav.top_menu{
+		& .show_menu{
+			display: block;
 		}
-	}
-	.about-us__slider .slider__navigation{
-		& .prev{
-			margin-left: 20px;
-		}
-		& .next{
-			margin-right: 20px;
-		}
-	}
-	.we-amazing{
-		& .steps{
-			justify-content: center;
-			& .step{
-				max-width: 350px;
+		header.header nav.top_menu .menu.menu_left{
+			& li:last-child.show_right_menu{
+				display: none;
 			}
 		}
-	}
-	.service h2{
-		font-size: 30px;
-		&::after{
-			width: 100px;
+		.menu_right{
+			top: 202px;
 		}
-	}
-	.service__item{
-		min-width: 320px;
-		&::before{
-			left: 110px;
-		}
-	}
-	.portfolio{
-		& h2{
-			font-size: 30px;
-		}
-		&__item{
-			width: 100%;
-		}
-	}
-	.buy-now{
-		padding-bottom: 30px;
-		& h2{
-			font-size: 30px;
-		}
-		& p{
-			padding: 0 10px;
-		}
-		&__link{
-			& ul{
-				flex-direction: column;
-				align-items: center;
-				& li:first-child a{
-					margin-right: 0;
-					margin-bottom: 20px;
+		.slider__wrap{
+			& h1{
+				transform: translateY(0);
+				& + p{
+					transform: translateY(0);
 				}
 			}
 		}
-	}
-	.clients-say{
-		padding: 0 5px;
-		& h2{
-			font-size: 30px;
-		}
-	}
-	.happy-clients {
-		& h2{
-			font-size: 30px;
-			& + p{
-				padding: 0 5px;
+		.slider__buttons{
+			margin: 0 auto;
+			flex-direction: column;
+			text-align: center;
+			align-items: center;
+			transform: translateY(0);
+
+			& .btn{
+				margin-bottom: 10px;
+				margin-right: 0;
 			}
 		}
-		& .wrap{
-			max-width: 200px;
+		.about-us__slider .slider__navigation{
+			& .prev{
+				margin-left: 20px;
+			}
+			& .next{
+				margin-right: 20px;
+			}
 		}
-	}
-	.responsive__box{
-		&-icon{
-			height: 50px;
-			width: 50px;
-			font-size: 20px;
-			line-height: 50px;
+		.we-amazing{
+			& .steps{
+				justify-content: center;
+				& .step{
+					max-width: 350px;
+				}
+			}
 		}
-		& h4{
-			font-size: 16px;
-			line-height: 18px;
+		.service h2{
+			font-size: 30px;
+			&::after{
+				width: 100px;
+			}
 		}
-	}
-	.contact-us .box__contact{
-		width: 100%;
-		font-size: 14px;
-	}
-	.contact-us .box__form{
-		width: 100%;
-	}
-	.footer{
-		&__social{
-			bottom: 15px;
-			& ul{
-				& li{
-					margin-right: 5px;
-					& a{
-						width: 40px;
-						height: 40px;
-						font-size: 20px;
+		.service__item{
+			min-width: 320px;
+			&::before{
+				left: 110px;
+			}
+		}
+		.portfolio{
+			& h2{
+				font-size: 30px;
+			}
+			&__item{
+				width: 100%;
+			}
+		}
+		.buy-now{
+			padding-bottom: 30px;
+			& h2{
+				font-size: 30px;
+			}
+			& p{
+				padding: 0 10px;
+			}
+			&__link{
+				& ul{
+					flex-direction: column;
+					align-items: center;
+					& li:first-child a{
+						margin-right: 0;
+						margin-bottom: 20px;
 					}
 				}
 			}
 		}
-		&__copy{
-			line-height: 18px;
-			text-align: center;
+		.clients-say{
+			padding: 0 5px;
+			& h2{
+				font-size: 30px;
+			}
+		}
+		.happy-clients {
+			& h2{
+				font-size: 30px;
+				& + p{
+					padding: 0 5px;
+				}
+			}
+			& .wrap{
+				max-width: 200px;
+			}
+		}
+		.responsive__box{
+			&-icon{
+				height: 50px;
+				width: 50px;
+				font-size: 20px;
+				line-height: 50px;
+			}
+			& h4{
+				font-size: 16px;
+				line-height: 18px;
+			}
+		}
+		.contact-us .box__contact{
+			width: 100%;
+			font-size: 14px;
+		}
+		.contact-us .box__form{
+			width: 100%;
+		}
+		.footer{
+			&__social{
+				bottom: 15px;
+				& ul{
+					& li{
+						margin-right: 5px;
+						& a{
+							width: 40px;
+							height: 40px;
+							font-size: 20px;
+						}
+					}
+				}
+			}
+			&__copy{
+				line-height: 18px;
+				text-align: center;
+			}
 		}
 	}
 }
