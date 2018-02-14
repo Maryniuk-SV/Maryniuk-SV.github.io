@@ -1,7 +1,8 @@
-$('.clients').owlCarousel({
-    loop:true,
-    dots:false,
-    autoWidth:true,
+$(function(){
+    $('.clients').owlCarousel({
+        loop:true,
+        dots:false,
+        autoWidth:true,
     // items:5,
     margin:50,
     responsiveClass: true,
@@ -18,4 +19,14 @@ $('.clients').owlCarousel({
             items:5
         }
     }
+})
+
+    $('.up__btn').click(function() {
+        $('html, body').stop().animate({scrollTop: 0}, 'slow', 'swing');
+    });
+
+
+
+
+    
 })
