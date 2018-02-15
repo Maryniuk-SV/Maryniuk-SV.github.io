@@ -44,4 +44,28 @@ $(function(){
         $('.menu').toggleClass('drop-down show')
     });
 
+    // Modal
+
+
+    // Open by click
+    $('.js-button').click(function() {
+        $('.content-box').css('filter', 'blur(5px)');
+        $('.js-overlay').fadeIn();
+        // $('.js-overlay').addClass('disabled');
+    });
+
+    // Close
+    $('.js-close').click(function() {
+        $('.js-overlay').fadeOut();
+        $('.content-box').css('filter', 'none');
+    });
+
+    $(document).mouseup(function(e) {
+        var popup = $('.js-popup');
+        if (e.target != popup[0] && popup.has(e.target).length === 0) {
+            $('.js-overlay').fadeOut();
+            $('.content-box').css('filter', 'none');
+        }
+    });
+
 });

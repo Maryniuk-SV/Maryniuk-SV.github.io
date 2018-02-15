@@ -1764,6 +1764,12 @@ nav.top_menu .show {
   text-transform: uppercase;
   cursor: pointer;
   border: none;
+  -webkit-box-shadow: 2px 5px 10px rgba(0, 0, 0, 0.6), -5px 0px 10px rgba(0, 0, 0, 0.2);
+          box-shadow: 2px 5px 10px rgba(0, 0, 0, 0.6), -5px 0px 10px rgba(0, 0, 0, 0.2);
+}
+.contact-us .box__form-btn:active {
+  -webkit-box-shadow: inset 1px 1px 0px #ffffff;
+          box-shadow: inset 1px 1px 0px #ffffff;
 }
 .contact-us .box__contact {
   padding-right: 30px;
@@ -2059,6 +2065,163 @@ nav.top_menu .show {
     z-index: -9;
   }
 }
+.overlay {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  display: none;
+}
+.close-popup {
+  cursor: pointer;
+  position: absolute;
+  border: 2px solid #f94877;
+  background-color: #ccc;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  height: 30px;
+  width: 30px;
+  -webkit-border-radius: 50%;
+          border-radius: 50%;
+  top: -12px;
+  right: -12px;
+}
+.close-popup::before,
+.close-popup::after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 3px;
+  right: -5px;
+  height: 2px;
+  width: 27px;
+  background-color: #f94877;
+  -webkit-transform-origin: 0 0 0;
+      -ms-transform-origin: 0 0 0;
+          transform-origin: 0 0 0;
+  -webkit-transform: rotateZ(45deg);
+      -ms-transform: rotate(45deg);
+          transform: rotateZ(45deg);
+}
+.close-popup::after {
+  -webkit-transform: rotateZ(-45deg);
+      -ms-transform: rotate(-45deg);
+          transform: rotateZ(-45deg);
+  top: 22px;
+  right: -4px;
+}
+.popup {
+  position: absolute;
+  width: 450px;
+  height: 370px;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  border: 2px solid #f94877;
+  -webkit-border-radius: 10px;
+          border-radius: 10px;
+  background-color: #f6f6f6;
+  padding: 30px;
+}
+.popup h3 {
+  color: #666666;
+  font-size: 24px;
+  font-family: OpenSansSemiBold, Verdana, Arial, sans-serif;
+  margin-bottom: 25px;
+}
+.popup p {
+  color: #333;
+  text-align: center;
+  font-size: 16px;
+  line-height: 24px;
+  margin-bottom: 25px;
+}
+.popup form {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+.popup form input {
+  margin-bottom: 15px;
+  height: 30px;
+  -webkit-border-radius: 4px;
+          border-radius: 4px;
+  border: 1px solid #cccccc;
+  outline: none;
+  padding: 0 10px;
+}
+.popup form input::-webkit-input-placeholder {
+  text-transform: capitalize;
+  color: #888888;
+}
+.popup form input::-moz-placeholder {
+  text-transform: capitalize;
+  color: #888888;
+}
+.popup form input:-ms-input-placeholder {
+  text-transform: capitalize;
+  color: #888888;
+}
+.popup form input::-ms-input-placeholder {
+  text-transform: capitalize;
+  color: #888888;
+}
+.popup form input::placeholder {
+  text-transform: capitalize;
+  color: #888888;
+}
+.popup form input:focus::-webkit-input-placeholder {
+  color: transparent;
+}
+.popup form input:focus::-moz-placeholder {
+  color: transparent;
+}
+.popup form input:focus:-ms-input-placeholder {
+  color: transparent;
+}
+.popup form input:focus::-ms-input-placeholder {
+  color: transparent;
+}
+.popup form input:focus::placeholder {
+  color: transparent;
+}
+.popup form input:focus:invalid {
+  color: red;
+  border: 1px solid red;
+}
+.popup form input:valid {
+  border: 1px solid #fcc2c5;
+}
+.popup form button {
+  cursor: pointer;
+  height: 30px;
+  border: none;
+  background-color: #f94877;
+  text-transform: uppercase;
+  color: #fff;
+  font-family: OpenSansSemiBold, Verdana, Arial, sans-serif;
+  font-size: 18px;
+  -webkit-border-radius: 4px;
+          border-radius: 4px;
+  outline: none;
+  -webkit-box-shadow: 2px 5px 10px rgba(0, 0, 0, 0.6), -5px 0px 10px rgba(0, 0, 0, 0.2);
+          box-shadow: 2px 5px 10px rgba(0, 0, 0, 0.6), -5px 0px 10px rgba(0, 0, 0, 0.2);
+}
+.popup form button:active {
+  -webkit-box-shadow: inset 1px 1px 0px #ffffff;
+          box-shadow: inset 1px 1px 0px #ffffff;
+}
 /* ****************** MEDIA QUERIS ***************** */
 @media screen and (max-width: 1200px) {
   .employees {
@@ -2328,6 +2491,13 @@ nav.top_menu .show {
   .about-us__slider .slider__navigation .next {
     margin-right: 20px;
   }
+  .about__btn .btn {
+    padding: 12px 22px;
+  }
+  .about__btn .btn:first-child {
+    padding: 12px 14px;
+    margin-right: 15px;
+  }
   .we-amazing .steps {
     -webkit-box-pack: center;
     -webkit-justify-content: center;
@@ -2425,5 +2595,13 @@ nav.top_menu .show {
   .footer__copy {
     line-height: 18px;
     text-align: center;
+  }
+  .popup {
+    width: 300px;
+    height: 350px;
+    padding: 20px 10px;
+  }
+  .popup p {
+    line-height: 18px;
   }
 }

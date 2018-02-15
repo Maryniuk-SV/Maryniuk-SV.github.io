@@ -1,0 +1,113 @@
+.overlay{
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	// background-color: rgba(0,0,0,.8);
+	display: none;
+}
+
+.close-popup{
+	cursor: pointer;
+	position: absolute;
+	border: 2px solid @main_color;
+	background-color: #ccc;
+	box-sizing: border-box;
+	height: 30px;
+	width: 30px;
+	border-radius: 50%;
+	top: -12px;
+	right: -12px;
+	&::before, &::after{
+		content: "";
+		display: block;
+		position: absolute;
+		top: 3px;
+		right: -5px;
+		height: 2px;
+		width: 27px;
+		background-color: @main_color;
+		transform-origin: 0 0 0;
+		transform: rotateZ(45deg);
+	}
+	&::after{
+		transform: rotateZ(-45deg);
+		top: 22px;
+		right: -4px;
+	}
+}
+
+.popup{
+	position: absolute;
+	width: 450px;
+	height: 370px;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	box-sizing: border-box;
+	border: 2px solid @main_color;
+	border-radius: 10px;
+	background-color: #f6f6f6;
+	padding: 30px;
+	& h3{
+		color: @h_color;
+		font-size: 24px;
+		font-family: @semibold;
+		margin-bottom: 25px;
+	}
+	& p{
+		color: #333;
+		text-align: center;
+		font-size: 16px;
+		line-height: 24px;
+		margin-bottom: 25px;
+	}
+	form{
+		display: flex;
+		flex-direction: column;
+		& input{
+			margin-bottom: 15px;
+			height: 30px;
+			border-radius: 4px;
+			border: 1px solid #cccccc;
+			outline: none;
+			padding: 0 10px;
+			&::placeholder{
+				text-transform: capitalize;
+				color: #888888;
+			}
+			&:focus::placeholder{
+				color: transparent;
+			}
+			&:focus:invalid{
+				color: red;
+				border: 1px solid red;
+			}
+			&:valid{
+				border: 1px solid #fcc2c5;
+			}
+		}
+		& button{
+			cursor: pointer;
+			height: 30px;
+			border: none;
+			background-color: @main_color;
+			text-transform: uppercase;
+			color: #fff;
+			font-family: @semibold;
+			font-size: 18px;
+			border-radius: 4px;
+			outline: none;
+			box-shadow: 2px 5px 10px rgba(0,0,0,.6),-5px 0px 10px rgba(0,0,0,.2);
+			&:active{
+				box-shadow: inset 1px 1px 0px rgba(255,255,255,1);
+			}
+		}
+	}
+	// &-wrapper{
+	// 	width: 100%;
+	// 	height: 100%;
+	// 	position: relative;
+	// }
+}
