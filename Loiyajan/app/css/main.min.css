@@ -363,7 +363,7 @@ nav.top_menu .show {
   line-height: 42px;
   color: #666666;
   font-weight: 400;
-  margin-bottom: 45px;
+  margin-bottom: 30px;
   position: relative;
 }
 .about-us h2::before {
@@ -1395,6 +1395,20 @@ nav.top_menu .show {
 .clients-say .wrapper {
   z-index: 2;
 }
+/* ******************* SLIDER ******************* */
+.comment-wrap {
+  position: relative;
+  margin-bottom: 30px;
+  min-height: 300px;
+}
+.comment-wrap .client__comment {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.comment-wrap .client__comment:not(:first-child) {
+  opacity: 0;
+}
 /* ********************************* HAPPY CLIENTS ********************************* */
 .happy-clients {
   margin-top: 120px;
@@ -2222,7 +2236,7 @@ nav.top_menu .show {
   -webkit-box-shadow: inset 1px 1px 0px #ffffff;
           box-shadow: inset 1px 1px 0px #ffffff;
 }
-/* ****************** MEDIA QUERIS ***************** */
+/* ****************** MEDIA QUERIES ***************** */
 @media screen and (max-width: 1200px) {
   .employees {
     -webkit-justify-content: space-around;

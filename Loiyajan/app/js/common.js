@@ -68,4 +68,42 @@ $(function(){
         }
     });
 
+    // Comments slider
+
+    var prev  = document.getElementsByClassName('comment__prev')[0],
+        next  = document.getElementsByClassName('comment__next')[0],
+        items = document.getElementsByClassName('client__comment'),
+        count = 0;
+
+    prev.addEventListener('click', moveRight);
+    next.addEventListener('click', moveLeft);
+
+    function moveLeft(e){
+        e.preventDefault();
+        hide();
+        count++;
+        if(count === 3){
+            count = 0;
+            items[count].style.opacity = '1';
+        }
+        items[count].style.opacity = '1';
+    }
+
+    function moveRight(e){
+        e.preventDefault();
+        hide();
+        count--;
+        if(count === -1){
+            count = 2;
+            items[count].style.opacity = '1';
+        }
+        items[count].style.opacity = '1';
+    }
+
+    function hide(){
+        for (var i = 0; i < items.length; i++) {
+            items[i].style.opacity = '0';
+        }
+    };
+
 });

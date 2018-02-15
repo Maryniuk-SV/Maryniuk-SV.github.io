@@ -86,3 +86,19 @@
 		z-index: 2;
 	}
 }
+
+/* ******************* SLIDER ******************* */
+
+.comment-wrap{
+	position: relative;
+	margin-bottom: 30px;
+	min-height: 300px;
+	& .client__comment{
+		position: absolute;
+		top: 0;
+		left: 0;
+		&:not(:first-child){
+			opacity: 0;
+		}
+	}
+}
