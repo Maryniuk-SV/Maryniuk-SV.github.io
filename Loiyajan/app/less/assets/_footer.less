@@ -40,6 +40,14 @@
 				border: none;
 				max-width: 100%;
 			}
+			&:hover + .footer__social{
+				& a{
+					border-color: #333;
+					color: #333;
+				}
+			}
+		}
+		& .eclipse{
 			&::before{
 				content: '';
 				display: block;
@@ -49,16 +57,7 @@
 				bottom: 0;
 				left: 0;
 				background-color: rgba(0,0,0, .75);
-				// transition: opacity .4s;
-			}
-			&:hover::before{
-				animation: map .7s forwards;
-			}
-			&:hover + .footer__social{
-				& a{
-					border-color: #333;
-					color: #333;
-				}
+				transition: opacity .4s;
 			}
 		}
 	}
@@ -127,8 +126,12 @@
 	75%{
 		opacity: .15;
 	}
-	100%{
+	99%{
 		opacity: 0;
-		z-index: -9;
+	}
+	100%{
+		// opacity: 0;
+		// z-index: -9;
+		display: none;
 	}
 }

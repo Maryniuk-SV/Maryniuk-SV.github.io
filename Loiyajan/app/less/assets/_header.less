@@ -119,7 +119,7 @@ nav.top_menu{
 	width: 100%;
 	margin-top: 50px;
 	height: 720px;
-	background-image: url(../img/slider_bg.png);
+	background-image: url(../img/slider/slider_bg.png);
 	background-size: cover;
 	position: relative;
 	&::before{
@@ -210,7 +210,7 @@ nav.top_menu{
 	border-radius: 50%;
 	transition: background-color .5s;
 	cursor: pointer;
-	&:hover{
+	&:hover, &.active{
 		background-color: @main_color;
 		border-color: @main_color;
 	}

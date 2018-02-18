@@ -37,6 +37,8 @@ $(function(){
      function(){ $(this).prev().removeClass('team__hover') }
      );
 
+    // Mobile menu
+
     $('.show_right_menu').click(function(){
         $('.menu_right').toggleClass('drop-down show')
     });
@@ -44,8 +46,28 @@ $(function(){
         $('.menu').toggleClass('drop-down show')
     });
 
-    // Modal
+    if(matchMedia) {
+        var screenTwo = window.matchMedia("(max-width:576px)");
+        screenTwo.addListener(changeTwo);
+        changeTwo(screenTwo);
+    }
+    function changeTwo (screen){
+        if (!screen.matches) {
+            $('.menu').removeClass('drop-down show')
+        }
+    }
+    if(matchMedia) {
+        var screenOne = window.matchMedia("(max-width:992px)");
+        screenOne.addListener(changeOne);
+        changeOne(screenOne);
+    }
+    function changeOne (screen){
+        if (!screen.matches) {
+            $('.menu_right').removeClass('drop-down show')
+        }
+    }
 
+    //////// Modal
 
     // Open by click
     $('.js-button').click(function() {
@@ -68,15 +90,42 @@ $(function(){
         }
     });
 
+    // Header Slider
+
+    var box         = document.getElementsByClassName('slider')[0],
+        dots        = document.getElementsByClassName('dot'),
+        dotIndex    = 0,
+        sliderItems = [
+            "background-image: url(app/img/slider/slider_bg.png);",
+            "background-image: url(app/img/slider/slider_1.jpg);",
+            "background-image: url(app/img/slider/slider_2.jpg);",
+            "background-image: url(app/img/slider/slider_3.jpg);",
+            "background-image: url(app/img/slider/slider_4.jpg);"
+        ];
+
+    dots[dotIndex].addEventListener('click', showSlide);
+
+    function showSlide() {
+        hideClassActive();
+        
+    };
+    
+    function hideClassActive() {
+        for (var i = 0; i < dots.length; i++) {
+            dots[i].classList.remove('active');
+        }
+    };
+    // box.setAttribute('style', x);
+
     // Comments slider
 
-    var prev  = document.getElementsByClassName('comment__prev')[0],
-        next  = document.getElementsByClassName('comment__next')[0],
+    var prevComment  = document.getElementsByClassName('comment__prev')[0],
+        nextComment  = document.getElementsByClassName('comment__next')[0],
         items = document.getElementsByClassName('client__comment'),
         count = 0;
 
-    prev.addEventListener('click', moveRight);
-    next.addEventListener('click', moveLeft);
+    prevComment.addEventListener('click', moveRight);
+    nextComment.addEventListener('click', moveLeft);
 
     function moveLeft(e){
         e.preventDefault();
@@ -105,5 +154,56 @@ $(function(){
             items[i].style.opacity = '0';
         }
     };
+
+
+    // About Us slider
+
+    var prevImg  = document.getElementsByClassName('prev')[0],
+        nextImg  = document.getElementsByClassName('next')[0],
+        images = document.getElementsByClassName('slider__item'),
+        index = 0;
+
+    prevImg.addEventListener('click', prevImage);
+    nextImg.addEventListener('click', nextImage);
+
+    function prevImage() {
+        hideImage();
+        index--;
+        if(index === -1){
+            index = images.length - 1;
+            images[index].style.opacity = '1';
+        }
+        images[index].style.opacity = '1';
+    };
+
+    function nextImage() {
+        hideImage();
+        index++;
+        if(index === images.length) {
+            index = 0;
+            images[index].style.opacity = '1';
+        };
+        images[index].style.opacity = '1';
+    };
+
+    function hideImage(){
+        for (var i = 0; i < images.length; i++) {
+            images[i].style.opacity = '0';
+        }
+    };
+
+
+    // Footer
+
+    $('.map-container').mouseover(function() {
+        setTimeout(function() {
+            $('.eclipse').stop().fadeOut().css('display', 'none');
+        }, 400)
+    });
+    $('.map-container').mouseout(function() {
+        setTimeout(function() {
+            $('.eclipse').stop().fadeIn().css('display', 'block');
+        }, 400)
+    });
 
 });
