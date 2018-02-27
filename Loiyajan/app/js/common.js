@@ -90,6 +90,11 @@ $(function(){
         }
     });
 
+
+
+
+
+
     // Header Slider
 
     var box         = document.getElementsByClassName('slider')[0],
@@ -103,19 +108,36 @@ $(function(){
             "background-image: url(app/img/slider/slider_4.jpg);"
         ];
 
-    dots[dotIndex].addEventListener('click', showSlide);
+    setInterval(function() {
+        dotIndex++;
+        if(dotIndex === sliderItems.length) {
+            dotIndex = 0;
+        };
+        box.setAttribute('style', sliderItems[dotIndex]);
 
-    function showSlide() {
-        hideClassActive();
-        
-    };
-    
-    function hideClassActive() {
-        for (var i = 0; i < dots.length; i++) {
-            dots[i].classList.remove('active');
-        }
-    };
-    // box.setAttribute('style', x);
+        for(var i = 0; i < sliderItems.length; i++) {
+            if(box.getAttribute('style') === sliderItems[i]) {
+                for(var j = 0; j < dots.length; j++) {
+                    dots[j].classList.remove('active');
+                };
+                dots[i].classList.add('active');
+            };
+        };
+    }, 7000);
+
+    $('.dot').click(function() {
+        $(this).addClass('active').siblings().removeClass('active');
+        for(var l = 0; l < dots.length; l++){
+            if($(this).hasClass('active')) {
+                box.setAttribute('style', sliderItems[l]);
+                // dotIndex = l;
+            };
+        };
+    });
+
+
+
+
 
     // Comments slider
 

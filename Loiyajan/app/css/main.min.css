@@ -233,6 +233,9 @@ nav.top_menu .show {
   -webkit-background-size: cover;
           background-size: cover;
   position: relative;
+  -webkit-transition: background .5s;
+  -o-transition: background .5s;
+  transition: background .5s;
 }
 .slider::before {
   content: '';
@@ -433,6 +436,11 @@ nav.top_menu .show {
           transform: translateY(-50%);
   -webkit-box-shadow: 0px 8px 18px -6px rgba(0, 0, 0, 0.6), -5px 0 10px rgba(0, 0, 0, 0.3), 5px 0 10px rgba(0, 0, 0, 0.1);
           box-shadow: 0px 8px 18px -6px rgba(0, 0, 0, 0.6), -5px 0 10px rgba(0, 0, 0, 0.3), 5px 0 10px rgba(0, 0, 0, 0.1);
+}
+.about-us .slider__item img {
+  -webkit-box-shadow: 0px 8px 18px -6px rgba(0, 0, 0, 0.6), -5px 0 10px rgba(0, 0, 0, 0.3), 5px 0 10px rgba(0, 0, 0, 0.1);
+          box-shadow: 0px 8px 18px -6px rgba(0, 0, 0, 0.6), -5px 0 10px rgba(0, 0, 0, 0.3), 5px 0 10px rgba(0, 0, 0, 0.1);
+  display: block;
 }
 .about-us .slider__navigation {
   font-size: 30px;
