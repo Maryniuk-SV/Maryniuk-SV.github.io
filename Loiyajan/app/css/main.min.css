@@ -93,6 +93,83 @@ a:hover {
   max-width: 1170px;
   margin: 0 auto;
 }
+/* The Modal (background) */
+.modal {
+  display: none;
+  /* Hidden by default */
+  position: fixed;
+  /* Stay in place */
+  z-index: 1;
+  /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%;
+  /* Full width */
+  height: 100%;
+  /* Full height */
+  overflow: auto;
+  /* Enable scroll if needed */
+  background-color: #000000;
+  /* Fallback color */
+  background-color: rgba(0, 0, 0, 0.4);
+  /* Black w/ opacity */
+}
+/* Modal Content/Box */
+.modal-content {
+  background-color: #f6f6f6;
+  margin: 15% auto;
+  /* 15% from the top and centered */
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%;
+  /* Could be more or less, depending on screen size */
+}
+.modal-content h2 {
+  font-size: 26px;
+  margin-bottom: 20px;
+}
+.modal-content p {
+  text-align: center;
+  font-family: OpenSansSemiBold, Verdana, Arial, sans-serif;
+  line-height: 26px;
+  max-width: 600px;
+  margin: 0 auto;
+  margin-bottom: 20px;
+  color: #666666;
+}
+.modal .btn-modal {
+  display: block;
+  margin: 0 auto;
+  max-width: 150px;
+  text-align: center;
+  -webkit-border-radius: 3px;
+          border-radius: 3px;
+  color: #f94877;
+  font-family: OpenSansSemiBold, Verdana, Arial, sans-serif;
+  font-size: 16px;
+  -webkit-transition: color .4s;
+  -o-transition: color .4s;
+  transition: color .4s;
+}
+.modal .btn-modal:hover {
+  color: #fff;
+}
+/* The Close Button */
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+  -webkit-transition: color .4s;
+  -o-transition: color .4s;
+  transition: color .4s;
+}
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
 /* ************************ HEADER ************************** */
 .header {
   padding-top: 50px;
