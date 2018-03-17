@@ -434,13 +434,13 @@ nav.top_menu .show {
   -webkit-transform: translateY(-50%);
       -ms-transform: translateY(-50%);
           transform: translateY(-50%);
-  -webkit-box-shadow: 0px 8px 18px -6px rgba(0, 0, 0, 0.6), -5px 0 10px rgba(0, 0, 0, 0.3), 5px 0 10px rgba(0, 0, 0, 0.1);
-          box-shadow: 0px 8px 18px -6px rgba(0, 0, 0, 0.6), -5px 0 10px rgba(0, 0, 0, 0.3), 5px 0 10px rgba(0, 0, 0, 0.1);
+  -webkit-box-shadow: 0px 8px 16px -6px rgba(0, 0, 0, 0.6), -5px 0 10px rgba(0, 0, 0, 0.3), 5px 0 10px rgba(0, 0, 0, 0.1);
+          box-shadow: 0px 8px 16px -6px rgba(0, 0, 0, 0.6), -5px 0 10px rgba(0, 0, 0, 0.3), 5px 0 10px rgba(0, 0, 0, 0.1);
 }
 .about-us .slider__item img {
+  display: block;
   -webkit-box-shadow: 0px 8px 18px -6px rgba(0, 0, 0, 0.6), -5px 0 10px rgba(0, 0, 0, 0.3), 5px 0 10px rgba(0, 0, 0, 0.1);
           box-shadow: 0px 8px 18px -6px rgba(0, 0, 0, 0.6), -5px 0 10px rgba(0, 0, 0, 0.3), 5px 0 10px rgba(0, 0, 0, 0.1);
-  display: block;
 }
 .about-us .slider__navigation {
   font-size: 30px;
@@ -2255,6 +2255,20 @@ nav.top_menu .show {
 .popup form button:active {
   -webkit-box-shadow: inset 1px 1px 0px #ffffff;
           box-shadow: inset 1px 1px 0px #ffffff;
+}
+.socialmediaicons ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.socialmediaicons ul li {
+  display: inline-block;
+  margin-left: 5px;
+}
+.socialmediaicons ul li img {
+  width: 30px;
+  -webkit-border-radius: 50%;
+          border-radius: 50%;
 }
 /* ****************** MEDIA QUERIES ***************** */
 @media screen and (max-width: 1200px) {

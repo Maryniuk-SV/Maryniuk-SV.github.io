@@ -91,21 +91,17 @@ $(function(){
     });
 
 
-
-
-
-
     // Header Slider
 
     var box         = document.getElementsByClassName('slider')[0],
         dots        = document.getElementsByClassName('dot'),
         dotIndex    = 0,
         sliderItems = [
-            "background-image: url(app/img/slider/slider_bg.png);",
-            "background-image: url(app/img/slider/slider_1.jpg);",
-            "background-image: url(app/img/slider/slider_2.jpg);",
-            "background-image: url(app/img/slider/slider_3.jpg);",
-            "background-image: url(app/img/slider/slider_4.jpg);"
+                    "background-image: url(app/img/slider/slider_bg.png);",
+                    "background-image: url(app/img/slider/slider_1.jpg);",
+                    "background-image: url(app/img/slider/slider_2.jpg);",
+                    "background-image: url(app/img/slider/slider_3.jpg);",
+                    "background-image: url(app/img/slider/slider_4.jpg);"
         ];
 
     setInterval(function() {
@@ -125,11 +121,12 @@ $(function(){
         };
     }, 7000);
 
-    $('.dot').click(function() {
+    $('.dot').click(function(e) {
+        var target = e.target;
         $(this).addClass('active').siblings().removeClass('active');
         for(var l = 0; l < dots.length; l++){
             if($(this).hasClass('active')) {
-                box.setAttribute('style', sliderItems[l]);
+                box.attr('style', sliderItems[l]);
                 // dotIndex = l;
             };
         };
@@ -229,3 +226,31 @@ $(function(){
     });
 
 });
+
+
+
+var socialMedia = {
+  'facebook-f' : 'http://facebook.com/profile.php?id=100004690685995',
+  youtube: 'http://youtube.com/watch?v=tvEQQFOq4ls',
+  'pinterest-p': '#',
+  twitter: '#',
+  linkedin: 'https://www.linkedin.com/',
+  dribbble: '#',
+  instagram: '#'
+};
+
+var socialList = function() {
+  var output = '<ul>',
+  myList = document.querySelectorAll('.socialmediaicons');
+
+  for (var key in arguments[0]) {
+    output += '<li><a href="' + socialMedia[key] + '">' +
+      '<i class="fa fa-' + key + '"></i>' +
+      '</a></li>';
+  }
+  output += '</ul>';
+  
+  for (var i = myList.length - 1; i >= 0; i--) {
+    myList[i].innerHTML = output;
+  };
+}(socialMedia);
