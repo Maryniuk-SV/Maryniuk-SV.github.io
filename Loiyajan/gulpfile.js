@@ -18,8 +18,8 @@ var gulp           = require('gulp'),
 
 gulp.task('common-js', function() {
 	return gulp.src([
-		'app/js/custom.js',
-		'app/js/customJQ.js'
+		'app/js/customJQ.js',
+		'app/js/custom.js'
 		])
 	.pipe(concat('common.min.js'))
 	.pipe(uglify())
@@ -33,7 +33,7 @@ gulp.task('js', ['common-js'], function() {
 		'app/js/common.min.js', // Всегда в конце
 		])
 	.pipe(concat('scripts.min.js'))
-	.pipe(uglify()) // Минимизировать весь js (на выбор)
+	// .pipe(uglify()) // Минимизировать весь js (на выбор)
 	.pipe(gulp.dest('app/js'))
 	.pipe(browserSync.reload({stream: true}));
 });

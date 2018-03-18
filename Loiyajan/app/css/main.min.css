@@ -93,83 +93,6 @@ a:hover {
   max-width: 1170px;
   margin: 0 auto;
 }
-/* The Modal (background) */
-.modal {
-  display: none;
-  /* Hidden by default */
-  position: fixed;
-  /* Stay in place */
-  z-index: 1;
-  /* Sit on top */
-  left: 0;
-  top: 0;
-  width: 100%;
-  /* Full width */
-  height: 100%;
-  /* Full height */
-  overflow: auto;
-  /* Enable scroll if needed */
-  background-color: #000000;
-  /* Fallback color */
-  background-color: rgba(0, 0, 0, 0.4);
-  /* Black w/ opacity */
-}
-/* Modal Content/Box */
-.modal-content {
-  background-color: #f6f6f6;
-  margin: 15% auto;
-  /* 15% from the top and centered */
-  padding: 20px;
-  border: 1px solid #888;
-  width: 80%;
-  /* Could be more or less, depending on screen size */
-}
-.modal-content h2 {
-  font-size: 26px;
-  margin-bottom: 20px;
-}
-.modal-content p {
-  text-align: center;
-  font-family: OpenSansSemiBold, Verdana, Arial, sans-serif;
-  line-height: 26px;
-  max-width: 600px;
-  margin: 0 auto;
-  margin-bottom: 20px;
-  color: #666666;
-}
-.modal .btn-modal {
-  display: block;
-  margin: 0 auto;
-  max-width: 150px;
-  text-align: center;
-  -webkit-border-radius: 3px;
-          border-radius: 3px;
-  color: #f94877;
-  font-family: OpenSansSemiBold, Verdana, Arial, sans-serif;
-  font-size: 16px;
-  -webkit-transition: color .4s;
-  -o-transition: color .4s;
-  transition: color .4s;
-}
-.modal .btn-modal:hover {
-  color: #fff;
-}
-/* The Close Button */
-.close {
-  color: #aaa;
-  float: right;
-  font-size: 28px;
-  font-weight: bold;
-  -webkit-transition: color .4s;
-  -o-transition: color .4s;
-  transition: color .4s;
-}
-.close:hover,
-.close:focus {
-  color: black;
-  text-decoration: none;
-  cursor: pointer;
-}
 /* ************************ HEADER ************************** */
 .header {
   padding-top: 50px;
@@ -436,7 +359,7 @@ nav.top_menu .show {
 }
 /* ***************************** ABOUT US ***************************** */
 .about-us {
-  padding: 120px 0;
+  padding: 120px 10px;
 }
 .about-us h2 {
   font-size: 42px;
@@ -487,7 +410,6 @@ nav.top_menu .show {
           align-items: center;
   margin-right: 30px;
   position: relative;
-  overflow: hidden;
 }
 .about-us .slider__items {
   width: 570px;
@@ -2177,7 +2099,9 @@ nav.top_menu .show {
   }
 }
 .overlay {
-  position: absolute;
+  position: fixed;
+  z-index: 1;
+  overflow: auto;
   width: 100%;
   height: 100%;
   top: 0;
@@ -2333,19 +2257,83 @@ nav.top_menu .show {
   -webkit-box-shadow: inset 1px 1px 0px #ffffff;
           box-shadow: inset 1px 1px 0px #ffffff;
 }
-.socialmediaicons ul {
-  margin: 0;
-  padding: 0;
-  list-style: none;
+/* The Modal (background) */
+.modal {
+  display: none;
+  /* Hidden by default */
+  position: fixed;
+  /* Stay in place */
+  z-index: 1;
+  /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%;
+  /* Full width */
+  height: 100%;
+  /* Full height */
+  overflow: auto;
+  /* Enable scroll if needed */
+  background-color: #000000;
+  /* Fallback color */
+  background-color: rgba(0, 0, 0, 0.4);
+  /* Black w/ opacity */
 }
-.socialmediaicons ul li {
-  display: inline-block;
-  margin-left: 5px;
+/* Modal Content/Box */
+.modal-content {
+  background-color: #f6f6f6;
+  margin: 15% auto;
+  /* 15% from the top and centered */
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%;
+  /* Could be more or less, depending on screen size */
 }
-.socialmediaicons ul li img {
-  width: 30px;
-  -webkit-border-radius: 50%;
-          border-radius: 50%;
+.modal-content h2 {
+  font-size: 26px;
+  margin-bottom: 20px;
+}
+.modal-content p {
+  text-align: center;
+  font-family: OpenSansSemiBold, Verdana, Arial, sans-serif;
+  line-height: 26px;
+  max-width: 600px;
+  margin: 0 auto;
+  margin-bottom: 20px;
+  color: #666666;
+}
+.modal .btn-modal {
+  border-width: 2px;
+  display: block;
+  margin: 0 auto;
+  max-width: 150px;
+  text-align: center;
+  -webkit-border-radius: 3px;
+          border-radius: 3px;
+  color: #f94877;
+  font-family: OpenSansSemiBold, Verdana, Arial, sans-serif;
+  font-size: 16px;
+  -webkit-transition: color .4s;
+  -o-transition: color .4s;
+  transition: color .4s;
+}
+.modal .btn-modal:hover {
+  color: #fff;
+}
+/* The Close Button */
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+  -webkit-transition: color .4s;
+  -o-transition: color .4s;
+  transition: color .4s;
+}
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
 }
 /* ****************** MEDIA QUERIES ***************** */
 @media screen and (max-width: 1200px) {
@@ -2448,7 +2436,7 @@ nav.top_menu .show {
 }
 @media screen and (max-width: 768px) {
   .logo {
-    left: 2%;
+    left: 1.7%;
   }
   nav.top_menu .menu_left {
     margin-right: 10px;
@@ -2459,9 +2447,9 @@ nav.top_menu .show {
   .slider__control {
     top: 70%;
     right: 50%;
-    -webkit-transform: rotateZ(90deg);
-        -ms-transform: rotate(90deg);
-            transform: rotateZ(90deg);
+    -webkit-transform: rotateZ(270deg);
+        -ms-transform: rotate(270deg);
+            transform: rotateZ(270deg);
   }
   .slider__wrap h1 {
     font-size: 52px;

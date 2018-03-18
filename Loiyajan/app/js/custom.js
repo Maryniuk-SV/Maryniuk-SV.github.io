@@ -1,97 +1,3 @@
-$(function(){
-    $('.clients').owlCarousel({
-        loop:true,
-        dots:false,
-        autoWidth:true,
-        margin:50,
-        responsiveClass: true,
-        nav:true,
-        navText: ['<i class="fa fa-angle-left"></i>', '<i class="fa fa-angle-right"></i>'],
-        responsive:{
-            0:{
-                items:1
-            },
-            600:{
-                items:3
-            },
-            1000:{
-                items:5
-            }
-        }
-    })
-
-    $('.up__btn').click(function() {
-        $('html, body').stop().animate({scrollTop: 0}, 'slow', 'swing');
-    });
-
-    $('.foto__wrap').mouseover(
-     function(){ $(this).addClass('team__hover') }
-     );
-    $('.foto__wrap').mouseout(
-     function(){ $(this).removeClass('team__hover') }
-     );
-    $('.social').mouseover(
-     function(){ $(this).prev().addClass('team__hover') }
-     );
-    $('.social').mouseout(
-     function(){ $(this).prev().removeClass('team__hover') }
-     );
-
-    // Mobile menu
-
-    $('.show_right_menu').click(function(){
-        $('.menu_right').toggleClass('drop-down show')
-    });
-    $('.show_menu').click(function(){
-        $('.menu').toggleClass('drop-down show')
-    });
-
-    if(matchMedia) {
-        var screenTwo = window.matchMedia("(max-width:576px)");
-        screenTwo.addListener(changeTwo);
-        changeTwo(screenTwo);
-    }
-    function changeTwo (screen){
-        if (!screen.matches) {
-            $('.menu').removeClass('drop-down show')
-        }
-    }
-    if(matchMedia) {
-        var screenOne = window.matchMedia("(max-width:992px)");
-        screenOne.addListener(changeOne);
-        changeOne(screenOne);
-    }
-    function changeOne (screen){
-        if (!screen.matches) {
-            $('.menu_right').removeClass('drop-down show')
-        }
-    }
-
-    //////// Modal
-
-    // Open by click
-    $('.js-button').click(function(e) {
-        e.preventDefault();
-        $('.content-box').css('filter', 'blur(5px)');
-        $('.js-overlay').fadeIn();
-        // $('.js-overlay').addClass('disabled');
-    });
-
-    // Close
-    $('.js-close').click(function() {
-        $('.js-overlay').fadeOut();
-        $('.content-box').css('filter', 'none');
-    });
-
-    $(document).mouseup(function(e) {
-        var popup = $('.js-popup');
-        if (e.target != popup[0] && popup.has(e.target).length === 0) {
-            $('.js-overlay').fadeOut();
-            $('.content-box').css('filter', 'none');
-        }
-    });
-
-
     // Header Slider
 
     var box         = document.getElementsByClassName('slider')[0],
@@ -105,7 +11,9 @@ $(function(){
                     "background-image: url(app/img/slider/slider_4.jpg);"
         ];
 
-    setInterval(function() {
+    var int = setInterval(moveSlider, 7000);
+
+    function moveSlider() {
         dotIndex++;
         if(dotIndex === sliderItems.length) {
             dotIndex = 0;
@@ -120,21 +28,32 @@ $(function(){
                 dots[i].classList.add('active');
             };
         };
-    }, 7000);
+    };
 
-    $('.dot').click(function(e) {
-        var target = e.target;
-        $(this).addClass('active').siblings().removeClass('active');
-        for(var l = 0; l < dots.length; l++){
-            if($(this).hasClass('active')) {
-                box.attr('style', sliderItems[l]);
-                // dotIndex = l;
-            };
-        };
-    });
+    for(var i = dots.length - 1; i >= 0; i--) {
+        dots[i].addEventListener('click', addClassActive, false);
+    }  
 
+    function addClassActive(e) {
+        target = e.target;
+        removeClassActive();
+        target.classList.add('active');
+        findTarget();
+    }
 
-
+    function removeClassActive() {
+        for(var i = dots.length - 1; i >= 0; i--) {
+            dots[i].classList.remove('active');
+        } 
+    }
+    function findTarget() {
+        for(var i = dots.length - 1; i >= 0; i--) {
+            if(target === dots[i]) {
+                box.setAttribute('style', sliderItems[i]);
+                dotIndex = i;
+            }
+        } 
+    }
 
 
     // Comments slider
@@ -213,39 +132,24 @@ $(function(){
     };
 
 
-    // Footer
-
-    $('.map-container').mouseover(function() {
-        setTimeout(function() {
-            $('.eclipse').stop().fadeOut().css('display', 'none');
-        }, 400)
-    });
-    $('.map-container').mouseout(function() {
-        setTimeout(function() {
-            $('.eclipse').stop().fadeIn().css('display', 'block');
-        }, 400)
-    });
-
-});
-
-
+// Dinamic block of social networks
 
 var socialMedia = {
-  'facebook-f' : 'http://facebook.com/profile.php?id=100004690685995',
-  youtube: 'http://youtube.com/watch?v=tvEQQFOq4ls',
-  'pinterest-p': '#',
-  twitter: '#',
-  linkedin: 'https://www.linkedin.com/',
-  dribbble: '#',
-  instagram: '#'
+  'facebook-f'  : 'http://facebook.com/profile.php?id=100004690685995',
+  'pinterest-p' : 'https://www.pinterest.com/',
+  'google-plus' : 'https://plus.google.com/',
+  'twitter'     : 'https://twitter.com/',
+  'linkedin'    : 'https://www.linkedin.com/',
+  'dribbble'    : 'https://dribbble.com/',
+  'instagram'   : 'https://www.instagram.com/'
 };
 
 var socialList = function() {
   var output = '<ul>',
-  myList = document.querySelectorAll('.socialmediaicons');
+  myList = document.querySelectorAll('.footer__social');
 
   for (var key in arguments[0]) {
-    output += '<li><a href="' + socialMedia[key] + '">' +
+    output += '<li><a href="' + socialMedia[key] + '" target="_blank">' +
       '<i class="fa fa-' + key + '"></i>' +
       '</a></li>';
   }
@@ -257,7 +161,7 @@ var socialList = function() {
 }(socialMedia);
 
 
-
+// Second Modal Window
 
 // Get the modal
 var modal = document.getElementById('myModal');
