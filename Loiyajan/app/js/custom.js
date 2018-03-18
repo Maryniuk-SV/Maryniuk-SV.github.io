@@ -1,4 +1,5 @@
-    // Header Slider
+(function() {
+        // Header Slider
 
     var box         = document.getElementsByClassName('slider')[0],
         dots        = document.getElementsByClassName('dot'),
@@ -35,10 +36,10 @@
     }  
 
     function addClassActive(e) {
-        target = e.target;
+        var target = e.target;
         removeClassActive();
         target.classList.add('active');
-        findTarget();
+        findTarget(target);
     }
 
     function removeClassActive() {
@@ -46,7 +47,7 @@
             dots[i].classList.remove('active');
         } 
     }
-    function findTarget() {
+    function findTarget(target) {
         for(var i = dots.length - 1; i >= 0; i--) {
             if(target === dots[i]) {
                 box.setAttribute('style', sliderItems[i]);
@@ -60,8 +61,8 @@
 
     var prevComment  = document.getElementsByClassName('comment__prev')[0],
         nextComment  = document.getElementsByClassName('comment__next')[0],
-        items = document.getElementsByClassName('client__comment'),
-        count = 0;
+        items        = document.getElementsByClassName('client__comment'),
+        count        = 0;
 
     prevComment.addEventListener('click', moveRight);
     nextComment.addEventListener('click', moveLeft);
@@ -99,8 +100,8 @@
 
     var prevImg  = document.getElementsByClassName('prev')[0],
         nextImg  = document.getElementsByClassName('next')[0],
-        images = document.getElementsByClassName('slider__item'),
-        index = 0;
+        images   = document.getElementsByClassName('slider__item'),
+        index    = 0;
 
     prevImg.addEventListener('click', prevImage);
     nextImg.addEventListener('click', nextImage);
@@ -195,3 +196,46 @@ window.onclick = function(event) {
         modal.style.display = "none";
     }
 }
+
+// Portfolio filter
+
+var btnCategories  = document.querySelectorAll('.categories > ul > li > a'),
+    portfolioItems = document.getElementsByClassName('portfolio__item');
+
+for (var i = btnCategories.length - 1; i >= 0; i--) {
+        btnCategories[i].addEventListener('click', addClassBtn, false); 
+        btnCategories[i].addEventListener('click', filter, false); 
+    }
+
+function addClassBtn(e) {
+    var target = e.target;
+    e.preventDefault();
+    removeClassBtn();
+    target.classList.add('active__categories');
+};
+
+function removeClassBtn() {
+    for (var i = btnCategories.length - 1; i >= 0; i--) {
+        btnCategories[i].classList.remove('active__categories');
+    }
+};
+
+function filter(e) {
+    e.preventDefault();
+    
+    var target    = e.target;
+    var className = target.textContent;
+
+    for (var j = portfolioItems.length - 1; j >= 0; j--) {
+        if(portfolioItems[j].classList.contains(className)){
+            portfolioItems[j].style.display = 'block';
+        } else if(className === 'all'){
+            for (var i = portfolioItems.length - 1; i >= 0; i--) {
+                portfolioItems[i].style.display = 'block';
+            }
+        } else{
+            portfolioItems[j].style.display = 'none';
+        }
+    }
+}
+})();
