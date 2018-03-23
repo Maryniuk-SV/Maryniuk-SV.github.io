@@ -32,20 +32,20 @@
 							<a href="index.html">loiyajan</a>
 						</div>
 					</div>
-					<nav class="top_menu">
+					<nav id="top_menu" class="top_menu">
 						<a class="show_menu" href="#"><i class="fa fa-bars"></i></a>
 						<ul class="menu menu_left">
-							<li><a href="#">home</a></li>
-							<li><a href="#">about us</a></li>
-							<li><a href="#">our team</a></li>
-							<li><a href="#">service</a></li>
+							<li><a href="index.html">home</a></li>
+							<li><a href="#about_us">about us</a></li>
+							<li><a href="#our_team">our team</a></li>
+							<li><a href="#service">service</a></li>
 							<li class="show_right_menu"><a href="#"><i class="fa fa-bars"></i></a></li>
 						</ul>
 						<ul class="menu menu_right">
-							<li><a href="#">portfolio</a></li>
-							<li><a href="#">clients</a></li>
-							<li><a href="#">how we do?</a></li>
-							<li><a href="#">contact us</a></li>
+							<li><a href="#portfolio">portfolio</a></li>
+							<li><a href="#clients">clients</a></li>
+							<li><a href="#how_we_do">how we do?</a></li>
+							<li><a href="#contact_us">contact us</a></li>
 						</ul>
 					</nav>
 				</div>
@@ -56,7 +56,7 @@
 					<p>kaje lagbar pareee</p>
 					<div class="slider__buttons">
 						<a class="btn slider__btn" href="#">brending</a>
-						<a class="btn slider__btn js-button" href="#">web design</a>
+						<a class="btn slider__btn" href="#">web design</a>
 						<a class="btn slider__btn" href="#" id="myBtn">development</a>
 					</div>
 				</div>
@@ -67,6 +67,7 @@
 					<span class="dot"></span>
 					<span class="dot"></span>	
 				</div>
+				<div id="loc"></div>
 			</div>
 		</header>
 		<!-- The Modal -->
@@ -82,7 +83,7 @@
 
 		</div>
 
-		<section class="about-us">
+		<section id="about_us" class="about-us">
 			<div class="wrapper">
 				<div class="container">
 					<h2>about us</h2>
@@ -120,7 +121,7 @@
 			</div>
 		</section>
 
-		<section class="we-amazing">
+		<section id="how_we_do" class="we-amazing">
 			<div class="container">
 				<div class="wrapper">
 					<h2>WE ARE AMAZING YES WE ARE.</h2>
@@ -155,7 +156,7 @@
 			</div>
 		</section>
 
-		<section class="we-team">
+		<section id="our_team" class="we-team">
 			<div class="wrapper">
 				<h2>we are a team</h2>
 				<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</p>
@@ -260,7 +261,7 @@
 			</div>
 		</section>
 
-		<section class="service">
+		<section id="service" class="service">
 			<div class="wrapper">
 				<h2>what we do?</h2>
 				<p>Lorem ipsum dolor sit amet, consectetuer ad ipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</p>
@@ -305,7 +306,7 @@
 			</div>
 		</section>
 
-		<section class="portfolio">
+		<section id="portfolio" class="portfolio">
 			<h2>see our portfolio</h2>
 			<div class="categories">
 				<ul>
@@ -500,14 +501,14 @@
 					<div class="buy-now__link">
 						<ul>
 							<li><a href="#">buy now !</a></li>
-							<li><a href="#">contact us</a></li>
+							<li><a href="#" class="js-button">contact us</a></li>
 						</ul>
 					</div>
 				</div>
 			</div>
 		</section>
 
-		<section class="clients-say">
+		<section id="clients" class="clients-say">
 			<div class="wrapper">
 				<h2>what our clients say?</h2>
 				<div class="comment-wrap">
@@ -595,18 +596,30 @@
 			</div>
 		</section>
 
-		<section class="contact-us">
+		<section id="contact_us" class="contact-us">
 			<div class="wrapper">
 				<h2>contact-us</h2>
 				<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</p>
 				<div class="contact-us__container">
 					<div class="box__form">
-						<form action="#">
-							<input type="text" placeholder="Name*" required>
-							<input type="email" placeholder="Email*" required>
-							<input type="tel" placeholder="Phone*" required>
-							<textarea name="message" cols="30" rows="10" placeholder="Message*" required></textarea>
-							<button class="box__form-btn">send message</button>
+						<form action="#" id="jform" method="post" novalidate>
+							<div class="form__item">
+								<input type="text" id="fullname" placeholder="Name*" minlength="3" required>
+								<span class="message" id="name-ms"></span>
+							</div>
+							<div class="form__item">
+								<input type="email" id="email" placeholder="Email*" required>
+								<span class="message" id="email-ms"></span>
+							</div>
+							<div class="form__item">
+								<input type="tel" id="phone" placeholder="Phone*" required>
+								<span class="message" id="phone-ms"></span>
+							</div>
+							<div class="form__item">
+								<textarea name="message" id="about" cols="30" rows="10" placeholder="Message*" required></textarea>
+								<span class="message text-ms" id="about-ms"></span>
+							</div>
+							<button type="submit" id="send" class="box__form-btn">send message</button>
 						</form>
 					</div>
 					<div class="box__contact">
@@ -650,7 +663,7 @@
 				</div>
 			</div>
 			<div class="footer__copy">
-				<p>2015 <sup>&reg;</sup> All Rights Reserved - <a href="index.html">loiyajan</a> Responsive Theme </p>
+				<p>2018 <sup>&reg;</sup> All Rights Reserved - <a href="index.html">loiyajan</a> Responsive Theme </p>
 			</div>
 		</footer>
 	</div>
@@ -661,8 +674,9 @@
 				<h3>order service now!</h3>
 				<p>Leave us your contact details and we will get back to you in the near future</p>
 				<form action="#">
-					<input type="text" required placeholder="name">
+					<input type="text" required placeholder="name" minlength="3">
 					<input type="email" required placeholder="email">
+					<input type="password" required placeholder="password" pattern="^(?=.*\d)(?=.*[a-z])(?=.*[A-Z)(?!.*\s).*$">
 					<input type="tel" required placeholder="phone">
 					<button>send</button>
 				</form>

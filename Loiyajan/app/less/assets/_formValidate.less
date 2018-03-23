@@ -1,0 +1,49 @@
+.box__form{
+	& .form__item{
+		position: relative;
+		& .message{
+			position: absolute;
+			left: 50%;
+			top: 63px;
+			transform: translateX(-50%);
+			z-index: 2;
+			display: none;
+			box-shadow: 0 0 0 1px @main_color;
+			// border: 1px solid @main_color;
+			max-width: 100%;
+			text-align: center;
+			padding: 4px 10px;
+			border-radius: 5px;
+			color: @h_color;
+			background-color: #fff;
+			&::after{
+				content: '';
+				display: block;
+				position: absolute;
+				top: -11px;
+				left: 50%;
+				transform: translateX(-50%);
+				width: 0;
+				height: 0;
+				border: 5px solid transparent;
+				border-bottom: 5px solid @main_color;
+			}
+		}
+		& .show-ms{
+			display: block;
+			width: auto;
+		}
+	}
+}
+.box__form{
+	& .form__item{
+		& .text-ms{
+			top: 138px;
+		}
+	}
+}
+// .border-green{
+// 	& input, & textarea{
+// 		box-shadow: 0 0 0 1px #00af00;
+// 	}
+// }

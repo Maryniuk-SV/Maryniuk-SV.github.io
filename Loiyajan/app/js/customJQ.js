@@ -105,6 +105,109 @@ $(document).ready(function() {
         }, 400)
     });
 
+
+    // Anchor links
+    
+    $("#top_menu").on("click","a", function (event) {
+        event.preventDefault();
+        var id  = $(this).attr('href'),
+            top = $(id).offset().top;
+        $('body,html').animate({scrollTop: top}, 1500);
+    });
+
+
+
+    // Form validate
+
+    jQuery.browser = {};
+    jQuery.browser.mozilla=/mozilla/.test(navigator.userAgent.toLowerCase())&&!/webkit/.test(navigator.userAgent.toLowerCase());
+    jQuery.browser.webkit=/webkit/.test(navigator.userAgent.toLowerCase());
+    jQuery.browser.opera=/opera/.test(navigator.userAgent.toLowerCase());
+    jQuery.browser.msie=/msie/.test(navigator.userAgent.toLowerCase());
+
+
+        var jVal = {
+            'fullName' : function() {
+
+                var nameInfo = $('#name-ms');
+                var ele = $('#fullname');
+
+                if(ele.val().length < 3) {
+                    jVal.errors = true;
+                    nameInfo.addClass('show-ms').html('Мінімальна допустима кількість символів 3');
+                } else {
+                    nameInfo.removeClass('show-ms');
+                }
+            },
+            'email' : function() {
+
+                var emailInfo = $('#email-ms');
+                var ele = $('#email');
+                var patt = /^.+@.+[.].{2,}$/i;
+
+                if(!patt.test(ele.val())) {
+                    jVal.errors = true;
+                    emailInfo.addClass('show-ms').html('Введіть, будь-ласка, коректну адресу поштової скриньки');
+                } else {
+                    emailInfo.removeClass('show-ms');
+                }
+            },
+            'phone' : function() {
+
+                var phoneInfo = $('#phone-ms');
+                var ele = $('#phone');
+                var patt = /^\+380\d{3}\d{2}\d{2}\d{2}$/;
+
+                if(!patt.test(ele.val())) {
+                    jVal.errors = true;
+                    phoneInfo.addClass('show-ms').html('Введіть, будь-ласка, коректний номер телефону');
+                } else {
+                    phoneInfo.removeClass('show-ms');
+                }
+            },
+            'about' : function() {
+
+                var aboutInfo = $('#about-ms');
+                var ele = $('#about');
+
+                if(ele.val().length < 20) {
+                    jVal.errors = true;
+                    aboutInfo.addClass('show-ms').html('Повідомнення повинно містити більше 20 символів');
+                } else {
+                    aboutInfo.removeClass('show-ms');
+                }
+            },
+            'sendIt' : function (){
+                if(!jVal.errors) {
+                    $('#jform').submit();
+                }
+            }
+        };
+// ====================================================== //
+$('#send').click(function (e){
+    e.preventDefault();
+    var obj = $.browser.webkit ? $('body') : $('html');
+    obj.animate({ scrollTop: $('#jform').offset().top }, 750, function (){
+        jVal.errors = false;
+        jVal.fullName();
+        jVal.email();
+        jVal.phone();
+        jVal.about();
+        jVal.sendIt();
+    });
+    return false;
+});
+$('#fullname').change(jVal.fullName);
+$('#email').change(jVal.email);
+$('#phone').change(jVal.phone);
+$('#about').change(jVal.about);
+
+
+
+
+
+
+
 });
 
 

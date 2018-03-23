@@ -224,6 +224,13 @@ nav.top_menu .show {
   display: block;
   text-align: center;
 }
+.fixed-menu {
+  z-index: 9999;
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+}
 /* ****************** SLIDER ***************** */
 .slider {
   width: 100%;
@@ -1330,7 +1337,6 @@ nav.top_menu .show {
   color: #fff;
   font-size: 42px;
   line-height: 43px;
-  cursor: pointer;
 }
 .clients-say h2::after {
   content: "";
@@ -1349,7 +1355,6 @@ nav.top_menu .show {
 .clients-say h4 {
   color: #fffefe;
   font-size: 20px;
-  cursor: pointer;
   font-family: OpenSans, Verdana, Tahoma, Arial, sans-serif;
   line-height: 22px;
   font-weight: 400;
@@ -1705,8 +1710,13 @@ nav.top_menu .show {
       -ms-flex-direction: column;
           flex-direction: column;
 }
+.contact-us .box__form form .form__item {
+  width: 100%;
+}
 .contact-us .box__form form input,
 .contact-us .box__form form textarea {
+  width: 100%;
+  display: block;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   height: 55px;
@@ -2149,7 +2159,7 @@ nav.top_menu .show {
 .popup {
   position: absolute;
   width: 450px;
-  height: 370px;
+  height: 400px;
   top: 50%;
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
@@ -2334,6 +2344,49 @@ nav.top_menu .show {
   color: black;
   text-decoration: none;
   cursor: pointer;
+}
+.box__form .form__item {
+  position: relative;
+}
+.box__form .form__item .message {
+  position: absolute;
+  left: 50%;
+  top: 63px;
+  -webkit-transform: translateX(-50%);
+      -ms-transform: translateX(-50%);
+          transform: translateX(-50%);
+  z-index: 2;
+  display: none;
+  -webkit-box-shadow: 0 0 0 1px #f94877;
+          box-shadow: 0 0 0 1px #f94877;
+  max-width: 100%;
+  text-align: center;
+  padding: 4px 10px;
+  -webkit-border-radius: 5px;
+          border-radius: 5px;
+  color: #666666;
+  background-color: #fff;
+}
+.box__form .form__item .message::after {
+  content: '';
+  display: block;
+  position: absolute;
+  top: -11px;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+      -ms-transform: translateX(-50%);
+          transform: translateX(-50%);
+  width: 0;
+  height: 0;
+  border: 5px solid transparent;
+  border-bottom: 5px solid #f94877;
+}
+.box__form .form__item .show-ms {
+  display: block;
+  width: auto;
+}
+.box__form .form__item .text-ms {
+  top: 138px;
 }
 /* ****************** MEDIA QUERIES ***************** */
 @media screen and (max-width: 1200px) {

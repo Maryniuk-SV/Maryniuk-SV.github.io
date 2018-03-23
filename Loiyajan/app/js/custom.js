@@ -238,4 +238,48 @@ function filter(e) {
         }
     }
 }
+
+    // geolocation
+        
+    // var elMap = document.getElementById('loc');
+    // var msg = 'Sorry, we were unable to get your location.';
+
+    // if (navigator.geolocation) {
+    //     navigator.geolocation.getCurrentPosition(success, fail);
+    //     elMap.textContent = 'Визначення місцезнаходження...';
+    // } else {
+    //     elMap.textContent = msg;
+    // }
+
+    // function success(position) {
+    //     msg = '<h3>Долгота:<br>';
+    //     msg += position.coords.latitude + '</h3>';
+    //     msg += '<h3>Широта:<br>';
+    //     msg += position.coords.longitude + '</h3>';
+    //     elMap.innerHTML = msg;
+    // }
+
+    // function fail(msg) {
+    //     elMap.textContent = msg;
+    //     console.log(msg.code);
+    // }
+
+
+
+
+
+ 
+    // var nav = document.getElementsByClassName('header__navigation');
+ 
+    // (window).scroll(function () {
+    //     if ((document).scrollTop() > 0) {
+    //         nav.classList.add("fixed-menu");
+    //     } else {
+    //         nav.classList.remove("fixed-menu");
+    //     }
+    // });
+ 
+
+
+
 })();
