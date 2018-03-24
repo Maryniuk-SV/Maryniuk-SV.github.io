@@ -18,7 +18,7 @@ var gulp           = require('gulp'),
 
 gulp.task('common-js', function() {
 	return gulp.src([
-		'app/js/customJQ.js',
+		// 'app/js/customJQ.js',
 		'app/js/custom.js'
 		])
 	.pipe(concat('common.min.js'))
