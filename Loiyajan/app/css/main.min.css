@@ -1200,6 +1200,15 @@ nav.top_menu .show {
   padding: 15px 30px;
   -webkit-border-radius: 3px;
           border-radius: 3px;
+  -webkit-transition: all .4s;
+  -o-transition: all .4s;
+  transition: all .4s;
+  -webkit-box-shadow: 0 0 0 1px #f94877;
+          box-shadow: 0 0 0 1px #f94877;
+}
+.portfolio__more a:hover {
+  color: #f94877;
+  background-color: transparent;
 }
 .events,
 .projects {
@@ -1528,9 +1537,13 @@ nav.top_menu .show {
   -webkit-align-items: center;
       -ms-flex-align: center;
           align-items: center;
+  height: 50px;
 }
 .happy-clients__container .owl-stage .item-cl {
   width: 150px;
+}
+.happy-clients__container .owl-stage .item-cl--one {
+  padding-top: 8px;
 }
 .happy-clients .owl-prev,
 .happy-clients .owl-next {
@@ -1933,9 +1946,8 @@ nav.top_menu .show {
 }
 .footer__map .map-container iframe {
   height: 540px;
-  width: 1440px;
+  width: 100%;
   border: none;
-  max-width: 100%;
 }
 .footer__map .map-container:hover + .footer__social a {
   border-color: #333;
