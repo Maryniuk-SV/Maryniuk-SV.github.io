@@ -1,4 +1,5 @@
 /* Import LESS files */
+@import "../libs/Magnific-Popup-master/dist/magnific-popup.css";
 @font-face {
   font-family: "OpenSansRegular";
   src: url("../fonts/OpenSansRegular/OpenSansRegular.eot");
@@ -53,6 +54,10 @@
   -webkit-transform: translateX(-50%);
       -ms-transform: translateX(-50%);
           transform: translateX(-50%);
+}
+html {
+  overflow: auto !important;
+  margin-right: 0 !important;
 }
 body {
   font-family: OpenSans, Verdana, Tahoma, Arial, sans-serif, Verdana, Tahoma, Arial, sans-serif;
@@ -700,7 +705,7 @@ nav.top_menu .show {
   text-align: center;
   color: #666666;
   line-height: 26px;
-  margin-bottom: 200px;
+  margin-bottom: 50px;
 }
 .employees {
   display: -webkit-box;
@@ -720,6 +725,7 @@ nav.top_menu .show {
   max-width: 270px;
   padding-top: 170px;
   padding-bottom: 20px;
+  margin-top: 160px;
   background-color: #f6f6f6;
   position: relative;
 }
@@ -1139,6 +1145,7 @@ nav.top_menu .show {
   -webkit-transition: all .4s;
   -o-transition: all .4s;
   transition: all .4s;
+  outline: none;
 }
 .portfolio__item-link ul a:hover {
   background-color: #fff;
@@ -1213,6 +1220,45 @@ nav.top_menu .show {
 .events,
 .projects {
   display: none;
+}
+/* overlay at start */
+.mfp-fade.mfp-bg {
+  opacity: 0;
+  -webkit-transition: all 0.15s ease-out;
+  -o-transition: all 0.15s ease-out;
+  transition: all 0.15s ease-out;
+}
+/* overlay animate in */
+.mfp-fade.mfp-bg.mfp-ready {
+  opacity: 0.8;
+}
+/* overlay animate out */
+.mfp-fade.mfp-bg.mfp-removing {
+  opacity: 0;
+}
+/* content at start */
+.mfp-fade.mfp-wrap .mfp-content {
+  opacity: 0;
+  -webkit-transform: scale(0) rotate(90deg);
+      -ms-transform: scale(0) rotate(90deg);
+          transform: scale(0) rotate(90deg);
+  -webkit-transition: all 0.3s ease-out;
+  -o-transition: all 0.3s ease-out;
+  transition: all 0.3s ease-out;
+}
+/* content animate it */
+.mfp-fade.mfp-wrap.mfp-ready .mfp-content {
+  opacity: 1;
+  -webkit-transform: scale(1.5) rotate(0);
+      -ms-transform: scale(1.5) rotate(0);
+          transform: scale(1.5) rotate(0);
+}
+/* content animate out */
+.mfp-fade.mfp-wrap.mfp-removing .mfp-content {
+  opacity: 0;
+  -webkit-transform: scale(0) rotate(-90deg);
+      -ms-transform: scale(0) rotate(-90deg);
+          transform: scale(0) rotate(-90deg);
 }
 /* ********************************** BUY NOW *************************************** */
 .buy-now {
@@ -2043,46 +2089,6 @@ nav.top_menu .show {
   letter-spacing: 0.14px;
   text-transform: uppercase;
 }
-@-webkit-keyframes map {
-  0% {
-    opacity: .7;
-  }
-  25% {
-    opacity: .5;
-  }
-  50% {
-    opacity: .3;
-  }
-  75% {
-    opacity: .15;
-  }
-  99% {
-    opacity: 0;
-  }
-  100% {
-    display: none;
-  }
-}
-@keyframes map {
-  0% {
-    opacity: .7;
-  }
-  25% {
-    opacity: .5;
-  }
-  50% {
-    opacity: .3;
-  }
-  75% {
-    opacity: .15;
-  }
-  99% {
-    opacity: 0;
-  }
-  100% {
-    display: none;
-  }
-}
 .up__btn {
   cursor: pointer;
   position: fixed;
@@ -2373,7 +2379,7 @@ nav.top_menu .show {
   display: none;
   -webkit-box-shadow: 0 0 0 1px #f94877;
           box-shadow: 0 0 0 1px #f94877;
-  max-width: 100%;
+  width: 90%;
   text-align: center;
   padding: 4px 10px;
   -webkit-border-radius: 5px;
@@ -2616,6 +2622,14 @@ nav.top_menu .show {
   .slider__buttons a.slider__btn {
     padding: 10px;
   }
+  .up__btn {
+    width: 43px;
+    height: 42px;
+  }
+  .up__btn i {
+    font-size: 26px;
+    line-height: 32px;
+  }
 }
 @media screen and (max-width: 576px) {
   .logo {
@@ -2629,6 +2643,9 @@ nav.top_menu .show {
     margin: 0;
     top: 50px;
   }
+  nav.top_menu {
+    width: 100%;
+  }
   nav.top_menu .show_menu {
     display: block;
   }
@@ -2637,6 +2654,19 @@ nav.top_menu .show {
   }
   .menu_right {
     top: 202px;
+  }
+  .nav-fixed {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .nav-fixed .wrapper {
+    width: 100%;
   }
   .slider__wrap h1 {
     -webkit-transform: translateY(0);
@@ -2792,5 +2822,13 @@ nav.top_menu .show {
   }
   .popup p {
     line-height: 18px;
+  }
+  .up__btn {
+    width: 38px;
+    height: 37px;
+  }
+  .up__btn i {
+    font-size: 26px;
+    line-height: 32px;
   }
 }

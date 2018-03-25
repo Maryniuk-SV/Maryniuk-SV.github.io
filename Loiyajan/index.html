@@ -7,6 +7,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 	<link rel="stylesheet" href="app/libs/reset-css/reset.css">
 	<link rel="stylesheet" href="app/libs/font-awesome/font-awesome.min.css">
+
 	<link rel="stylesheet" href="app/css/main.min.css">
 
 	<link rel="shortcut icon" href="app/img/favicon/favicon.ico" type="image/x-icon" />
@@ -24,7 +25,7 @@
 </head>
 <body>
 	<div class="content-box">
-		<header class="header">
+		<header id="home" class="header">
 			<div class="top--nav">
 				<div class="wrapper">
 					<div class="header__navigation">
@@ -36,17 +37,17 @@
 						<nav id="top_menu" class="top_menu">
 							<a class="show_menu" href="#"><i class="fa fa-bars"></i></a>
 							<ul class="menu menu_left">
-								<li><a id="home" href="index.html">home</a></li>
-								<li><a href="#about_us">about us</a></li>
-								<li><a href="#our_team">our team</a></li>
-								<li><a href="#service">service</a></li>
+								<li><a class="menu__item" href="#home">home</a></li>
+								<li><a class="menu__item" href="#about_us">about us</a></li>
+								<li><a class="menu__item" href="#our_team">our team</a></li>
+								<li><a class="menu__item" href="#service">service</a></li>
 								<li class="show_right_menu"><a href="#"><i class="fa fa-bars"></i></a></li>
 							</ul>
 							<ul class="menu menu_right">
-								<li><a href="#portfolio">portfolio</a></li>
-								<li><a href="#clients">clients</a></li>
-								<li><a href="#how_we_do">how we do?</a></li>
-								<li><a href="#contact_us">contact us</a></li>
+								<li><a class="menu__item" href="#portfolio">portfolio</a></li>
+								<li><a class="menu__item" href="#clients">clients</a></li>
+								<li><a class="menu__item" href="#how_we_do">how we do?</a></li>
+								<li><a class="menu__item" href="#contact_us">contact us</a></li>
 							</ul>
 						</nav>
 					</div>
@@ -322,7 +323,7 @@
 				<div class="portfolio__item photography">
 					<div class="portfolio__item-link">
 						<ul>
-							<li><a href="#"><i class="fa fa-map-pin"></i></a></li>
+							<li><a href="app/img/portfolio/photography_1.png" class="view"><i class="fa fa-map-pin"></i></a></li>
 							<li><a href="#"><i class="fa fa-external-link"></i></a></li>
 						</ul>					
 					</div>
@@ -336,7 +337,7 @@
 				<div class="portfolio__item photography">
 					<div class="portfolio__item-link">
 						<ul>
-							<li><a href="#"><i class="fa fa-map-pin"></i></a></li>
+							<li><a href="app/img/portfolio/photography_2.png" class="view"><i class="fa fa-map-pin"></i></a></li>
 							<li><a href="#"><i class="fa fa-external-link"></i></a></li>
 						</ul>				
 					</div>
@@ -350,7 +351,7 @@
 				<div class="portfolio__item photography">
 					<div class="portfolio__item-link">
 						<ul>
-							<li><a href="#"><i class="fa fa-map-pin"></i></a></li>
+							<li><a href="app/img/portfolio/photography_3.png" class="view"><i class="fa fa-map-pin"></i></a></li>
 							<li><a href="#"><i class="fa fa-external-link"></i></a></li>
 						</ul>					
 					</div>
@@ -364,7 +365,7 @@
 				<div class="portfolio__item photography">
 					<div class="portfolio__item-link">
 						<ul>
-							<li><a href="#"><i class="fa fa-map-pin"></i></a></li>
+							<li><a href="app/img/portfolio/photography_4.png" class="view"><i class="fa fa-map-pin"></i></a></li>
 							<li><a href="#"><i class="fa fa-external-link"></i></a></li>
 						</ul>					
 					</div>
@@ -378,7 +379,7 @@
 				<div class="portfolio__item design">
 					<div class="portfolio__item-link">
 						<ul>
-							<li><a href="#"><i class="fa fa-map-pin"></i></a></li>
+							<li><a href="app/img/portfolio/design_1.png" class="view"><i class="fa fa-map-pin"></i></a></li>
 							<li><a href="#"><i class="fa fa-external-link"></i></a></li>
 						</ul>					
 					</div>
@@ -392,7 +393,7 @@
 				<div class="portfolio__item design">
 					<div class="portfolio__item-link">
 						<ul>
-							<li><a href="#"><i class="fa fa-map-pin"></i></a></li>
+							<li><a href="app/img/portfolio/design_2.png" class="view"><i class="fa fa-map-pin"></i></a></li>
 							<li><a href="#"><i class="fa fa-external-link"></i></a></li>
 						</ul>					
 					</div>
@@ -406,7 +407,7 @@
 				<div class="portfolio__item design">
 					<div class="portfolio__item-link">
 						<ul>
-							<li><a href="#"><i class="fa fa-map-pin"></i></a></li>
+							<li><a href="app/img/portfolio/design_3.png" class="view"><i class="fa fa-map-pin"></i></a></li>
 							<li><a href="#"><i class="fa fa-external-link"></i></a></li>
 						</ul>					
 					</div>
@@ -420,7 +421,7 @@
 				<div class="portfolio__item design">
 					<div class="portfolio__item-link">
 						<ul>
-							<li><a href="#"><i class="fa fa-map-pin"></i></a></li>
+							<li><a href="app/img/portfolio/design_4.png" class="view"><i class="fa fa-map-pin"></i></a></li>
 							<li><a href="#"><i class="fa fa-external-link"></i></a></li>
 						</ul>					
 					</div>
@@ -434,7 +435,7 @@
 				<div class="portfolio__item events">
 					<div class="portfolio__item-link">
 						<ul>
-							<li><a href="#"><i class="fa fa-map-pin"></i></a></li>
+							<li><a href="app/img/portfolio/event_1.jpg" class="view"><i class="fa fa-map-pin"></i></a></li>
 							<li><a href="#"><i class="fa fa-external-link"></i></a></li>
 						</ul>					
 					</div>
@@ -448,7 +449,7 @@
 				<div class="portfolio__item events">
 					<div class="portfolio__item-link">
 						<ul>
-							<li><a href="#"><i class="fa fa-map-pin"></i></a></li>
+							<li><a href="app/img/portfolio/event_2.jpg" class="view"><i class="fa fa-map-pin"></i></a></li>
 							<li><a href="#"><i class="fa fa-external-link"></i></a></li>
 						</ul>					
 					</div>
@@ -462,7 +463,7 @@
 				<div class="portfolio__item events">
 					<div class="portfolio__item-link">
 						<ul>
-							<li><a href="#"><i class="fa fa-map-pin"></i></a></li>
+							<li><a href="app/img/portfolio/event_3.jpg" class="view"><i class="fa fa-map-pin"></i></a></li>
 							<li><a href="#"><i class="fa fa-external-link"></i></a></li>
 						</ul>					
 					</div>
@@ -476,7 +477,7 @@
 				<div class="portfolio__item projects">
 					<div class="portfolio__item-link">
 						<ul>
-							<li><a href="#"><i class="fa fa-map-pin"></i></a></li>
+							<li><a href="app/img/portfolio/project_1.jpg" class="view"><i class="fa fa-map-pin"></i></a></li>
 							<li><a href="#"><i class="fa fa-external-link"></i></a></li>
 						</ul>					
 					</div>

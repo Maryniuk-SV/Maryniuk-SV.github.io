@@ -1,4 +1,4 @@
-// Extra large devices (large desktops, 1200px and up)
+// Extra large devices 
 @media screen and (max-width: 1200px) {
 	.employees{
 		justify-content: space-around;
@@ -26,7 +26,7 @@
 		margin-left: 50px;
 	}
 }
-// Large devices (desktops, 992px and up)
+// Large devices 
 @media screen and (max-width: 992px) {
 	.logo{
 		left: 5%;
@@ -83,7 +83,7 @@
 	}
 }
 
-// Medium devices (tablets, 768px and up)
+// Medium devices 
 @media screen and (max-width: 768px) {
 	
 	.logo{
@@ -189,9 +189,17 @@
 	.slider__buttons a.slider__btn{
 		padding: 10px;
 	}
+	.up__btn{
+		width: 43px;
+		height: 42px;
+		& i{
+			font-size: 26px;
+			line-height: 32px;
+		}
+	}
 }
 
-// Small devices (landscape phones, 576px and up)
+// Small devices 
 @media screen and (max-width: 576px) {
 	.logo{
 		left: 50%;
@@ -203,6 +211,7 @@
 		top: 50px;
 	}
 	nav.top_menu{
+		width: 100%;
 		& .show_menu{
 			display: block;
 		}
@@ -214,6 +223,13 @@
 	}
 	.menu_right{
 		top: 202px;
+	}
+	.nav-fixed{
+		display: flex;
+		align-items: center;
+		& .wrapper{
+			width: 100%;
+		}
 	}
 	.slider__wrap{
 		& h1{
@@ -367,6 +383,14 @@
 		padding: 20px 10px;
 		& p{
 			line-height: 18px;
+		}
+	}
+	.up__btn{
+		width: 38px;
+		height: 37px;
+		& i{
+			font-size: 26px;
+			line-height: 32px;
 		}
 	}
 }

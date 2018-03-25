@@ -18,7 +18,7 @@ var gulp           = require('gulp'),
 
 gulp.task('common-js', function() {
 	return gulp.src([
-		// 'app/js/customJQ.js',
+		'app/js/customJQ.js',
 		'app/js/custom.js'
 		])
 	.pipe(concat('common.min.js'))
@@ -30,6 +30,7 @@ gulp.task('js', ['common-js'], function() {
 	return gulp.src([
 		'app/libs/jquery/dist/jquery.min.js',
 		'app/libs/OwlCarousel2-2.2.1/dist/owl.carousel.min.js',
+		'app/libs/Magnific-Popup-master/dist/jquery.magnific-popup.min.js',
 		'app/js/common.min.js', // Всегда в конце
 		])
 	.pipe(concat('scripts.min.js'))
