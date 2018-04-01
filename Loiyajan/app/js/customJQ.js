@@ -52,6 +52,9 @@ $(document).ready(function() {
     // Mobile menu///////////////
 
   $('.show_right_menu').click(function(){
+    if($(window).scrollTop() >= 50) {
+      $('.menu_right').css({"top": 36});
+    }
   	$('.menu_right').toggleClass('drop-down show');
 
     $(window).scroll(function(){
@@ -63,12 +66,17 @@ $(document).ready(function() {
     });
   });
   $('.show_menu').click(function(){
+    if($(window).scrollTop() >= 50) {
+      $('.menu_right').css({"top": 169});
+      $('.menu_left').css({"top": 17});
+    }
+
   	$('.menu').toggleClass('drop-down show');
 
     $(window).scroll(function(){
       if($(this).scrollTop() >= 50) {
         $('.menu_left').css({"top": 17});
-        $('.menu_right').css({"top": 168});
+        $('.menu_right').css({"top": 169});
       } else if($(this).scrollTop() <= 50) {
         $('.menu_left').css({"top": 50});
         $('.menu_right').css({"top": 202});

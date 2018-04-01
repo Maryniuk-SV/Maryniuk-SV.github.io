@@ -1,7 +1,7 @@
 (function() {
     // Header Slider///////////////////////////////
 
-    var box         = document.getElementsByClassName('slider')[0],
+    var box     = document.getElementsByClassName('slider')[0],
     dots        = document.getElementsByClassName('dot'),
     dotIndex    = 0,
     sliderItems = [
@@ -160,6 +160,8 @@
         var target    = e.target;
         var className = target.textContent;
 
+        if(className === 'categories') {return};
+
         for (var j = portfolioItems.length - 1; j >= 0; j--) {
             if(portfolioItems[j].classList.contains(className)){
                 portfolioItems[j].style.display = 'block';
@@ -171,6 +173,15 @@
                 portfolioItems[j].style.display = 'none';
             }
         }
+        categor.classList.toggle('show__categories');
+    }
+
+    var categor    = document.getElementById('categories');
+    var categorBtn = document.getElementById('categories__btn');
+    categorBtn.addEventListener('click', showCategories);
+
+    function showCategories() {
+        categor.classList.toggle('show__categories');
     }
 
     // Dinamic block of social networks/////////////////////
@@ -237,16 +248,62 @@
         }
     };
 
+    // ajax
 
-    // var arrMenuList = document.querySelectorAll('.menu a');
-    // arrMenuList.addEventListener('click', removeClassMenu);
-    // var menuList = document.getElementsByClassName('menu');
-    // // arrMenuList.onclick = removeClassMenu;
+    // document.getElementById('loadMore').addEventListener('click', loadData);
 
-    // function removeClassMenu() {
-    //     for (var i = menuList.length - 1; i >= 0; i--) {
-    //         menuList[i].classList.remove('show');
+    // var portfolioCollection = document.getElementsByClassName('portfolio__item');
+
+    //     function loadData(e) {
+    //         e.preventDefault();
+    //         var xhr = new XMLHttpRequest();
+
+    //         xhr.onload = function() {
+
+    //             if(xhr.status === 200) {
+    //                 var responseObject = JSON.parse(xhr.responseText);
+    //                 var newContent;
+    //                 var visibleItems = getVisibleItems(portfolioCollection);
+    //                 var count = 0;
+
+    //                 function getVisibleItems(arr) {
+    //                     var visible = [],
+    //                     currentValue = '';
+
+    //                     for (var i = 0; i < arr.length; i++) {
+    //                         if(arr[i].style.display == 'block') {
+    //                             currentValue = arr[i].querySelector('img').src.substring(22);
+    //                             visible.push(currentValue);
+    //                         }
+    //                     }
+    //                 return visible;
+    //                 };
+
+    //                 filter:
+    //                 for (var i = 0; i < responseObject.items.length; i++) {
+                        
+    //                     for (var j = 0; j < visibleItems.length; j++) {
+    //                         var str = visibleItems[j];
+
+    //                         if(responseObject.items[i].indexOf(str, 0) !== -1) continue filter;
+    //                         var div = document.createElement('div');
+    //                         div.className = "portfolio__item photography";
+    //                         div.innerHTML = responseObject.items[i]
+    //                         newContent += div;
+    //                         count++;
+    //                         if(count !== 0 && count % 3 === 0)break filter;
+    //                     }
+    //                 }
+                    
+    //                 document.getElementById('portfolio__items').insertBefore(newContent, null);
+    //             }
+    //         };
+
+    //     xhr.open('GET', 'data/data.json', true);
+    //     xhr.send(null);
+
     //     }
-    // }
+
+
 
 })();

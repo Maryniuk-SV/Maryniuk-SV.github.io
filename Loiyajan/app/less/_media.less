@@ -1,3 +1,17 @@
+@media only screen and (min-width: 2160px) {
+	.top--nav{
+		& .wrapper{
+			max-width: 1700px;
+		}
+	}
+}
+@media only screen and (max-width: 1960px) and (min-width: 1440px){
+	.top--nav{
+		& .wrapper{
+			max-width: 1240px;
+		}
+	}
+}
 // Extra large devices 
 @media screen and (max-width: 1200px) {
 	.employees{
@@ -43,6 +57,43 @@
 	}
 	.menu_right{
 		display: none;
+	}
+	.about-us__slider{
+		flex-direction: column;
+		& .slider{
+			&__wrapp{
+				width: 90%;
+				margin: 0 auto;
+				margin-bottom: 30px;
+			}
+			&__items{
+				margin: 0 auto;
+			}
+			&__item{
+				margin: 0 auto;
+			}
+			&__navigation{
+				& .prev{
+					margin-left: 100px;
+				}
+				& .next{
+					margin-right: 100px;
+				}
+			}
+			&__desc{
+				width: 100%;
+				& h3{
+					text-align: center;
+					& + p{
+						text-align: center;
+					}
+				}
+				& .about__btn{
+					position: static;
+					align-self: center;
+				}
+			}
+		}
 	}
 	.slider__control{
 		right: 30px;
@@ -112,42 +163,6 @@
 			}
 		}
 	}
-	.about-us__slider{
-		flex-direction: column;
-		& .slider{
-			&__wrapp{
-				width: 100%;
-				margin-bottom: 30px;
-			}
-			&__items{
-				margin: 0 auto;
-			}
-			&__item{
-				margin: 0 auto;
-			}
-			&__navigation{
-				& .prev{
-					margin-left: 100px;
-				}
-				& .next{
-					margin-right: 100px;
-				}
-			}
-			&__desc{
-				width: 100%;
-				& h3{
-					text-align: center;
-					& + p{
-						text-align: center;
-					}
-				}
-				& .about__btn{
-					position: static;
-					align-self: center;
-				}
-			}
-		}
-	}
 	.we-amazing{
 		& h2{
 			font-size: 30px;
@@ -164,6 +179,10 @@
 	}
 	.portfolio__item{
 		width: 50%;
+	}
+	.mfp-fade.mfp-wrap.mfp-ready .mfp-content {
+		opacity: 1;
+		transform: scale(1) rotate(0);
 	}
 	.happy-clients .wrap{
 		max-width: 400px;
@@ -207,11 +226,20 @@
 	}
 	.menu_left{
 		display: none;
+		width: 100%;
 		margin: 0;
 		top: 50px;
+		left: 0;
+		& a{
+			padding-left: 10px;
+		}
 	}
 	nav.top_menu{
 		width: 100%;
+		& .menu__item{
+			text-align: left;
+			text-indent: 25px;
+		}
 		& .show_menu{
 			display: block;
 		}
@@ -252,6 +280,12 @@
 		}
 	}
 	.about-us__slider .slider__navigation{
+		& .prev, & .next{
+			width: 36px;
+			height: 36px;
+			font-size: 24px;
+			line-height: 33px;
+		}
 		& .prev{
 			margin-left: 20px;
 		}
@@ -261,20 +295,28 @@
 	}
 	.about__btn{
 		& .btn{
-			padding: 12px 22px;
+			padding: 8px 18px;
 
 			&:first-child{
-				padding: 12px 14px;
+				padding: 8px 10px;
 				margin-right: 15px;
 			}
 		}
 	}
 	.we-amazing{
+		& h2{
+			font-size: 28px;
+		}
 		& .steps{
 			justify-content: center;
 			& .step{
 				max-width: 350px;
 			}
+		}
+	}
+	.we-team{
+		& h2{
+			font-size: 36px;
 		}
 	}
 	.service h2{
@@ -296,13 +338,54 @@
 		&__item{
 			width: 100%;
 		}
+		& .categories{
+			width: 100%;
+			height: 50px;
+			position: relative;
+			& ul{
+				width: 100%;
+				position: absolute;
+				flex-direction: column;
+				background-color: #f6f6f6;
+				z-index: 2;
+				opacity: .9;
+				& li{
+					width: 100%;
+					&:not(:first-child){
+						display: none;
+					}
+					&:first-child{
+						display: block;
+					}
+					& a{
+						display: block;
+						width: 100%;
+						border: none;
+						text-align: center;
+						border-radius: 0;
+						padding: 10px 0;
+						margin-bottom: 0;
+						&.active__categories{
+							border-radius: 0;
+						}
+					}
+				}
+				&.show__categories{
+					& li{
+						display: block;
+						z-index: 2;
+					}
+				}
+			}
+		}
 	}
 	.buy-now{
 		padding-bottom: 30px;
 		& h2{
-			font-size: 30px;
+			font-size: 28px;
 		}
 		& p{
+			font-size: 20px;
 			padding: 0 10px;
 		}
 		&__link{
@@ -321,6 +404,10 @@
 		& h2{
 			font-size: 30px;
 		}
+		& .comment__prev, & .comment__next{
+			padding: 4px 14px;
+			font-size: 26px;
+		}
 	}
 	.happy-clients {
 		& h2{
@@ -332,6 +419,12 @@
 		& .wrap{
 			max-width: 200px;
 		}
+		& .owl-prev, & .owl-next{
+			width: 36px;
+			height: 36px;
+			font-size: 24px;
+			line-height: 33px;
+		}
 	}
 	.happy-clients .owl-prev{
 		left: 15px;
@@ -341,19 +434,24 @@
 	}
 	.responsive__box{
 		&-icon{
-			height: 50px;
-			width: 50px;
-			font-size: 20px;
-			line-height: 50px;
+			display: none;
+		}
+		&-desc{
+			width: 100%;
 		}
 		& h4{
 			font-size: 16px;
 			line-height: 18px;
 		}
 	}
-	.contact-us .box__contact{
-		width: 100%;
-		font-size: 14px;
+	.contact-us {
+		& h2{
+			font-size: 36px;
+		}
+		& .box__contact{
+			width: 100%;
+			font-size: 14px;
+		}
 	}
 	.contact-us .box__form{
 		width: 100%;
