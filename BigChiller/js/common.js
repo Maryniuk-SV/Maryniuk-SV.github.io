@@ -30,6 +30,7 @@ $(document).ready(function() {
 		if (!div.is(e.target) 
 		    && div.has(e.target).length === 0) {
 			div.removeClass('menu__active');
+		$('.hamburger').find('span').removeClass('hamburger__active');
 		}
 	});
 
